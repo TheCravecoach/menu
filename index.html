@@ -186,9 +186,36 @@
         }
 
         .contact-link {
-            color: var(--accent);
+            color: var(--primary) !important;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .contact-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-3px);
+        }
+
+        .contact-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        .contact-link:hover::after {
+            width: 100%;
         }
 
         @media (max-width: 600px) {
@@ -240,7 +267,7 @@
                     <thead>
                         <tr>
                             <th>Flavour</th>
-                            <th>750gms</th>
+                            <th>500gms</th>
                             <th>1kg</th>
                         </tr>
                     </thead>
@@ -342,7 +369,7 @@
                     <thead>
                         <tr>
                             <th>Flavour</th>
-                            <th>750gms</th>
+                            <th>500gms</th>
                             <th>1kg</th>
                         </tr>
                     </thead>
@@ -437,12 +464,15 @@
     <a href="#top" id="backToTop"><i class="bi bi-arrow-up-short"></i></a>
 
     <div class="footer-info">
+        <p>Craving a closer look? 🎂 See our latest handcrafted creations in action on Instagram! <br>
+            Join our sweet community in Moncton! <br><i class="bi bi-instagram" style="margin-right: 5px;"></i>
+            <a href="https://instagram.com/the_cravecoach" class="contact-link"><span
+                    style="color: #d4a373; font-size: 17px;">@THE_CRAVECOACH</span></a>
+        </p><br>
         <p>📍 Kenview Dr., Moncton, NB</p>
-        <p><i class="bi bi-instagram"></i> <a href="https://instagram.com/the_cravecoach"
-                class="contact-link">@THE_CRAVECOACH</a></p>
-        <p><i class="bi bi-envelope-fill"></i> <span style="margin-right: 8px;">payjalgoti@gmail.com</span> | <i
-                class="bi bi-telephone-fill" style="margin-left: 8px;"></i>
-            +1(506)688-9777 </p>
+        <p><i class="bi bi-envelope-fill" style="margin-right: 5px;"></i> <span>payjalgoti@gmail.com</span></p>
+        <p style="margin-top: 3px;"><i class="bi bi-telephone-fill"
+                style="margin-right: 5px;"></i><span>+1(506)688-9777</span></p>
         <p>&copy; 2026 The CraveCoach. All Rights Reserved.</p>
     </div>
 
@@ -467,4 +497,5 @@
 </body>
 
 </html>
+
 
