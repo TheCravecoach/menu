@@ -1,7 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -13,23 +17,19 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
-
         :root {
             --primary: #4e342e;
             --accent: #d4a373;
             --bg: #fefae0;
             --white: #ffffff;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg);
@@ -37,7 +37,6 @@
             line-height: 1.6;
             scroll-behavior: smooth;
         }
-
         header {
             background-color: var(--primary);
             color: var(--white);
@@ -45,7 +44,6 @@
             padding: 2rem 1.2rem 1rem 1rem;
             border-bottom: 5px solid var(--accent);
         }
-
         header img {
             max-width: 280px;
             width: 80%;
@@ -54,19 +52,16 @@
             margin-bottom: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-
         .tagline {
             font-family: 'Caveat', cursive;
             font-size: 1.8rem;
             color: var(--accent);
         }
-
         .container {
             width: 92%;
             max-width: 900px;
             margin: 2rem auto;
         }
-
         .intro-statements {
             text-align: center;
             background: var(--white);
@@ -75,7 +70,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             margin-bottom: 2rem;
         }
-
         .location-pin {
             display: inline-block;
             background: #f1ebe1;
@@ -86,7 +80,6 @@
             font-weight: 600;
             margin-bottom: 10px;
         }
-
         .badge {
             display: inline-block;
             background: #2e7d32;
@@ -96,7 +89,6 @@
             font-size: 0.8rem;
             margin-bottom: 10px;
         }
-
         .share-btn {
             background: var(--primary);
             color: var(--accent);
@@ -108,51 +100,48 @@
             margin-bottom: 20px;
             transition: 0.3s;
         }
-
         .share-btn:hover {
             background: var(--accent);
             color: var(--white);
         }
-
-        /* HEADING STYLE KEPT THE SAME */
         h2 {
             font-family: 'Playfair Display', serif;
             text-align: center;
             border-bottom: 2px solid var(--accent);
             display: block;
-            margin: 1.5rem 1rem;
-            padding-bottom: 5px;
+            margin: 2rem 0 1.5rem;
+            padding-bottom: 8px;
         }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .menu-list-container {
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
             background: var(--white);
-            padding: 0.8rem;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            text-align: left;
+            margin-bottom: 2rem;
         }
-
-        ul {
-            list-style-type: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 350px;
         }
-
-        li {
-            padding: 8px 0;
-            border-bottom: 1px solid #f0f0f0;
+        th {
+            background: var(--accent);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-transform: uppercase;
             font-size: 0.95rem;
         }
-
-        li:last-child {
-            border-bottom: none;
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
         }
-
+        .price {
+            font-weight: 600;
+            color: #795548;
+        }
         #backToTop {
             position: fixed;
             bottom: 20px;
@@ -170,163 +159,589 @@
             font-size: 1.5rem;
             z-index: 1000;
         }
-
         .footer-info {
+
             background: var(--primary);
+
             color: var(--white);
+
             padding: 3rem 1rem;
+
             text-align: center;
+
             margin-top: 4rem;
+
         }
+
+
 
         .contact-link {
+
             color: var(--primary) !important;
+
             text-decoration: none;
+
             font-weight: 600;
+
             font-size: 1.1rem;
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 8px;
+
             transition: all 0.3s ease;
+
             position: relative;
+
             padding-bottom: 4px;
+
         }
+
+
 
         .contact-link:hover {
+
             color: var(--accent) !important;
+
             transform: translateY(-3px);
+
         }
+
+
 
         .contact-link::after {
+
             content: '';
+
             position: absolute;
+
             width: 0;
+
             height: 2px;
+
             bottom: 0;
+
             left: 0;
+
             background-color: var(--accent);
+
             transition: width 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
         }
+
+
 
         .contact-link:hover::after {
+
             width: 100%;
+
         }
 
-        .top-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-bottom: 2rem;
-            margin-top: 2rem;
-        }
 
-        .top-gallery img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid var(--accent);
-        }
 
-        @media (max-width: 768px) {
-            .menu-grid {
-                grid-template-columns: 1fr;
+        @media (max-width: 600px) {
+
+            header h1 {
+
+                font-size: 2.2rem;
+
             }
+
+
+
+            .tagline {
+
+                font-size: 1.4rem;
+
+            }
+
+
+
+            td,
+
+            th {
+
+                padding: 10px;
+
+            }
+
         }
+
     </style>
+
 </head>
+
+
 
 <body>
 
+
+
     <header id="top">
+
         <img src="cravecoach.jpeg" alt="The CraveCoach Logo">
+
         <p class="tagline"><span>Crafting Sweet Memories in Moncton, NB</span><br>
+
             <img src="canada.png" alt="CA"
+
                 style="height: 1em; width: auto; vertical-align: -0.1em; margin-left: 4px; border-radius: 2px;">
+
         </p>
+
     </header>
+
+
 
     <div class="container" style="text-align: center;">
 
+
+
         <div class="intro-statements">
-            <div class="location-pin">📍 Kenview Dr, Moncton, NB</div><br>
+
+            <div class="location-pin">📍 Kenview Dr., Moncton, NB</div><br>
+
             <span class="badge">100% Eggless Kitchen</span>
+
             <p><strong>Fresh and Homemade.</strong></p>
+
             <p>We believe in quality. Handcrafted with love in a dedicated eggless environment.</p>
+
             <p style="color: #d32f2f; font-size: 0.85rem; margin-top: 10px;">
+
                 <em>Book your order 2 or 3 days prior. Free delivery within 1km!</em>
+
             </p>
+
         </div>
+
+
 
         <button class="share-btn" onclick="shareMenu()">
+
             <i class="bi bi-share"></i> Share Menu with Friends
+
         </button>
 
-        <div class="top-gallery">
-            <img src="cake1.jpeg" alt="Specialty Cake 1">
-            <img src="cake2.jpeg" alt="Specialty Cake 2">
-            <img src="cake3.jpeg" alt="Pastry Detail">
+
+
+        <div class="menu-section">
+
+            <h2>Premium Cakes</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Flavour</th>
+
+                            <th>500gms</th>
+
+                            <th>1kg</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Oreolicious</td>
+
+                            <td class="price">$40</td>
+
+                            <td class="price">$55</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Caramel Crunch</td>
+
+                            <td class="price">$40</td>
+
+                            <td class="price">$55</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Pina Colada</td>
+
+                            <td class="price">$40</td>
+
+                            <td class="price">$55</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Mix Fruit</td>
+
+                            <td class="price">$45</td>
+
+                            <td class="price">$60</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Death by Chocolate</td>
+
+                            <td class="price">$45</td>
+
+                            <td class="price">$60</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Roasted Almond Chocolate</td>
+
+                            <td class="price">$50</td>
+
+                            <td class="price">$65</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Choco Hazulnut</td>
+
+                            <td class="price">$50</td>
+
+                            <td class="price">$65</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Chocolate Mocha</td>
+
+                            <td class="price">$50</td>
+
+                            <td class="price">$65</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Truffle</td>
+
+                            <td class="price">$50</td>
+
+                            <td class="price">$65</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Rasmalai </td>
+
+                            <td class="price">$50</td>
+
+                            <td class="price">$65</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Ferrero Rocher</td>
+
+                            <td class="price">$55</td>
+
+                            <td class="price">$70</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Nutella Crunch</td>
+
+                            <td class="price">$55</td>
+
+                            <td class="price">$70</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Belgium Praline</td>
+
+                            <td class="price">$55</td>
+
+                            <td class="price">$70</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>German Chocolate</td>
+
+                            <td class="price">$55</td>
+
+                            <td class="price">$70</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Red Velvet </td>
+
+                            <td class="price">$55</td>
+
+                            <td class="price">$70</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Kunafa Pistachio Chocolate </td>
+
+                            <td class="price">$60</td>
+
+                            <td class="price">$75</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Healthy Cake (Oats, Dates, Honey) </td>
+
+                            <td class="price">$70</td>
+
+                            <td class="price">$100</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
         </div>
 
-        <div class="menu-grid">
-            <div class="menu-list-container">
-                <h2>Premium Cakes</h2>
-                <ul>
-                    <li>Oreolicious</li>
-                    <li>Caramel Crunch</li>
-                    <li>Pina Colada</li>
-                    <li>Mix Fruit</li>
-                    <li>Death by Chocolate</li>
-                    <li>Roasted Almond Chocolate</li>
-                    <li>Choco Hazelnut</li>
-                    <li>Chocolate Mocha</li>
-                    <li>Truffle</li>
-                    <li>Rasmalai</li>
-                    <li>Ferrero Rocher</li>
-                    <li>Nutella Crunch</li>
-                    <li>Belgium Praline</li>
-                    <li>German Chocolate</li>
-                    <li>Red Velvet</li>
-                    <li>Kunafa Pistachio Chocolate</li>
-                    <li>Healthy Cake (Oats, Dates, Honey)</li>
-                </ul>
+
+
+        <div class="menu-section">
+
+            <h2>Classic Favorites</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Flavour</th>
+
+                            <th>500gms</th>
+
+                            <th>1kg</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Vanilla</td>
+
+                            <td class="price">$30</td>
+
+                            <td class="price">$45</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Pineapple</td>
+
+                            <td class="price">$35</td>
+
+                            <td class="price">$50</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Strawberry</td>
+
+                            <td class="price">$35</td>
+
+                            <td class="price">$50</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Blueberry</td>
+
+                            <td class="price">$35</td>
+
+                            <td class="price">$50</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Black Forest</td>
+
+                            <td class="price">$40</td>
+
+                            <td class="price">$55</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Chocolate</td>
+
+                            <td class="price">$40</td>
+
+                            <td class="price">$55</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Orange Chocolate</td>
+
+                            <td class="price">$40</td>
+
+                            <td class="price">$55</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Coconut</td>
+
+                            <td class="price">$45</td>
+
+                            <td class="price">$60</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
             </div>
 
-            <div class="menu-list-container">
-                <h2>Classic Favorites</h2>
-                <ul>
-                    <li>Vanilla</li>
-                    <li>Pineapple</li>
-                    <li>Strawberry</li>
-                    <li>Blueberry</li>
-                    <li>Black Forest</li>
-                    <li>Chocolate</li>
-                    <li>Orange Chocolate</li>
-                    <li>Coconut</li>
-                </ul>
+        </div>
 
-                <h2 style="margin-top: 2rem;">Sides & Treats</h2>
-                <p style="text-align: center; font-size: 0.8rem; margin-bottom: 10px;">* Minimum quantity: 6 pcs</p>
-                <ul>
-                    <li>Cupcakes with Filling</li>
-                    <li>Classic Brownie</li>
-                    <li>Walnut Brownie</li>
-                    <li>Biscoff Brownie</li>
-                    <li>Almond Caramel Poke Brownie</li>
-                    <li>Nutella Crunch Brownie</li>
-                </ul>
+
+
+        <div class="menu-section">
+
+            <h2>Sides & Treats</h2>
+
+            <p style="text-align: center; font-size: 0.8rem; margin-bottom: 10px;">* Minimum quantity: 6 pcs</p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Item</th>
+
+                            <th>Price</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Cupcakes with Filling</td>
+
+                            <td class="price">$3.5 each</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Classic Brownie</td>
+
+                            <td class="price">$4 each</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Walnut Brownie</td>
+
+                            <td class="price">$4.5 each</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Biscoff Brownie</td>
+
+                            <td class="price">$5 each</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Almond Caramel Poke Brownie</td>
+
+                            <td class="price">$5 each</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Nutella Crunch Brownie</td>
+
+                            <td class="price">$5 each</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
             </div>
+
         </div>
 
     </div>
 
+
+
     <a href="#top" id="backToTop"><i class="bi bi-arrow-up-short"></i></a>
 
+
+
     <div class="footer-info">
+
         <p>Craving a closer look? 🎂 See our latest handcrafted creations in action on Instagram! <br>
+
             Join our sweet community in Moncton! <br><i class="bi bi-instagram" style="margin-right: 5px;"></i>
-            <a href="https://instagram.com/the_cravecoach" class="contact-link"><span
-                    style="color: #d4a373; font-size: 17px;">@THE_CRAVECOACH</span></a>
+
+            <a href="https://instagram.com/the_cravecoach" class="contact-link">
+                <span style="color: #d4a373; font-size: 17px;">@THE_CRAVECOACH</span></a>
+
         </p><br>
         <p>📍 Kenview Dr, Moncton, NB</p>
         <p><i class="bi bi-envelope-fill" style="margin-right: 5px;"></i> <span>payjalgoti@gmail.com</span></p>
