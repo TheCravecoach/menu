@@ -58,7 +58,7 @@ const CLASSIC_CAKES = [
 ];
 
 const SIDES_TREATS = [
-  { name: "Cupcakes with Filling", emoji: "🧁", price: 3.5 },
+  { name: "Cupcakes with Filling", emoji: "🧁", price: 4.0 },
   { name: "Classic Brownie", emoji: "🍫", price: 4.0 },
   { name: "Walnut Brownie", emoji: "🌰", price: 4.5 },
   { name: "Biscoff Brownie", emoji: "🍪", price: 5.0 },
@@ -143,35 +143,24 @@ function CakeCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.04, duration: 0.4 }}
-      className="card-dark p-4 flex flex-col gap-3"
+      className="py-4 border-b border-border/50 flex flex-col items-center text-center gap-3"
       data-ocid={`menu.item.${index + 1}`}
     >
-      <div className="flex items-start gap-3">
-        <span className="text-2xl flex-shrink-0">{emoji}</span>
-        <h3 className="font-display font-semibold text-foreground leading-tight flex-1 text-sm md:text-base">
+      <div className="flex flex-col items-center gap-2">
+        <span className="text-3xl">{emoji}</span>
+        <h3 className="font-display font-semibold text-foreground leading-tight text-sm md:text-base">
           {name}
         </h3>
       </div>
-      <div className="flex gap-2 mt-auto">
-        <div
-          className="flex-1 rounded-md px-3 py-2 text-center"
-          style={{
-            background: "oklch(0.76 0.16 80 / 12%)",
-            border: "1px solid oklch(0.76 0.16 80 / 35%)",
-          }}
-        >
-          <div className="text-xs text-muted-foreground mb-0.5">500g</div>
-          <div className="font-bold text-gold text-sm">${price500}</div>
+      <div className="flex items-center justify-center gap-6 mt-1">
+        <div className="flex flex-col items-center">
+          <span className="text-[10px] uppercase tracking-wider text-muted-foreground">500g</span>
+          <span className="font-bold text-gold text-sm">${price500}</span>
         </div>
-        <div
-          className="flex-1 rounded-md px-3 py-2 text-center"
-          style={{
-            background: "oklch(0.76 0.16 80 / 20%)",
-            border: "1px solid oklch(0.76 0.16 80 / 50%)",
-          }}
-        >
-          <div className="text-xs text-muted-foreground mb-0.5">1 kg</div>
-          <div className="font-bold text-gold-bright text-sm">${price1kg}</div>
+        <div className="w-px h-6 bg-border/50"></div>
+        <div className="flex flex-col items-center">
+          <span className="text-[10px] uppercase tracking-wider text-muted-foreground">1 kg</span>
+          <span className="font-bold text-gold-bright text-sm">${price1kg}</span>
         </div>
       </div>
     </motion.div>
@@ -194,21 +183,23 @@ function TreatCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.06, duration: 0.4 }}
-      className="card-dark p-5 flex items-center gap-4"
+      className="py-4 border-b border-border/50 flex items-center justify-between gap-4"
       data-ocid={`treats.item.${index + 1}`}
     >
-      <span className="text-3xl flex-shrink-0">{emoji}</span>
-      <div className="flex-1">
-        <h3 className="font-display font-semibold text-foreground">{name}</h3>
-        <p className="text-xs text-muted-foreground mt-0.5">
-          Min. 6 pcs required
-        </p>
+      <div className="flex items-center gap-3">
+        <span className="text-3xl flex-shrink-0">{emoji}</span>
+        <div className="flex flex-col">
+          <h3 className="font-display font-semibold text-foreground text-sm md:text-base">{name}</h3>
+          <p className="text-[10px] uppercase tracking-wider text-muted-foreground mt-0.5">
+            Min. 6 pcs required
+          </p>
+        </div>
       </div>
       <div className="text-right flex-shrink-0">
+        <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Each</div>
         <div className="text-gold-bright font-bold text-lg">
           ${price.toFixed(2)}
         </div>
-        <div className="text-xs text-muted-foreground">each</div>
       </div>
     </motion.div>
   );
@@ -287,7 +278,7 @@ export default function App() {
     <div
       className="min-h-screen"
       style={{
-        background: "linear-gradient(135deg, #070707 0%, #111118 100%)",
+        background: "#fefae0",
       }}
     >
       {/* ── Navbar ── */}
@@ -328,7 +319,7 @@ export default function App() {
                   </div>
                   <div
                     className="font-semibold tracking-[0.2em] text-[0.45rem] sm:text-[0.5rem] md:text-[0.55rem] uppercase mt-1 text-center"
-                    style={{ color: "oklch(0.74 0.01 85)" }}
+                    style={{ color: "oklch(0.35 0.03 100)" }}
                   >
                     Premium Homemade Cakes
                   </div>
@@ -346,7 +337,7 @@ export default function App() {
                 onClick={() => scrollTo(link.id)}
                 className="text-xs font-semibold tracking-widest transition-all duration-200 hover:text-gold"
                 style={{
-                  color: "oklch(0.74 0.01 85)",
+                  color: "oklch(0.35 0.03 100)",
                   letterSpacing: "0.15em",
                 }}
                 data-ocid="nav.link"
@@ -360,7 +351,7 @@ export default function App() {
               className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-widest transition-all duration-200 hover:glow-gold"
               style={{
                 border: "1px solid oklch(0.76 0.16 80 / 50%)",
-                color: "oklch(0.89 0.17 82)",
+                color: "oklch(0.45 0.16 65)",
                 letterSpacing: "0.1em",
               }}
               data-ocid="nav.button"
@@ -400,7 +391,7 @@ export default function App() {
                     onClick={() => scrollTo(link.id)}
                     className="text-left text-sm font-semibold tracking-widest py-2 border-b transition-colors hover:text-gold"
                     style={{
-                      color: "oklch(0.74 0.01 85)",
+                      color: "oklch(0.35 0.03 100)",
                       borderBottomColor: "oklch(0.76 0.16 80 / 15%)",
                       letterSpacing: "0.15em",
                     }}
@@ -454,7 +445,7 @@ export default function App() {
               style={{
                 border: "1px solid oklch(0.76 0.16 80 / 40%)",
                 background: "oklch(0.76 0.16 80 / 10%)",
-                color: "oklch(0.89 0.17 82)",
+                color: "oklch(0.45 0.16 65)",
                 letterSpacing: "0.15em",
               }}
             >
@@ -480,7 +471,7 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-base md:text-lg mb-10 max-w-xl mx-auto"
-            style={{ color: "oklch(0.74 0.01 85)" }}
+            style={{ color: "oklch(0.35 0.03 100)" }}
           >
             Crafting Sweet Memories in Moncton, NB — Fresh, Handmade with Love
           </motion.p>
@@ -498,8 +489,8 @@ export default function App() {
               className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
               style={{
                 background: "transparent",
-                border: "2px solid oklch(0.76 0.16 80)",
-                color: "oklch(0.89 0.17 82)",
+                border: "2px solid oklch(0.55 0.14 65)",
+                color: "oklch(0.45 0.16 65)",
                 boxShadow: "0 0 20px oklch(0.76 0.16 80 / 30%)",
               }}
               data-ocid="hero.primary_button"
@@ -512,8 +503,8 @@ export default function App() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
               style={{
-                background: "oklch(0.76 0.16 80)",
-                color: "oklch(0.06 0 0)",
+                background: "oklch(0.55 0.14 65)",
+                color: "#fefae0",
               }}
               data-ocid="hero.secondary_button"
             >
@@ -529,18 +520,19 @@ export default function App() {
             className="flex flex-wrap justify-center gap-3"
           >
             {[
-              { icon: "📍", text: "Kenview Dr, Moncton NB" },
+              { icon: "📍", text: "14, Kenview Dr, Moncton NB" },
               { icon: "🥚", text: "100% Eggless" },
               { icon: "🎂", text: "Book 2-3 Days Prior" },
               { icon: "🚚", text: "Free Delivery within 1km" },
+              { icon: "💲", text: "Extra charges for customization" },
             ].map((badge) => (
               <div
                 key={badge.text}
                 className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium"
                 style={{
-                  background: "oklch(0.14 0.005 260 / 80%)",
-                  border: "1px solid oklch(0.76 0.16 80 / 25%)",
-                  color: "oklch(0.74 0.01 85)",
+                  background: "rgba(255, 255, 255, 0.8)",
+                  border: "1px solid rgba(0, 0, 0, 0.1)",
+                  color: "oklch(0.35 0.03 100)",
                 }}
               >
                 <span>{badge.icon}</span>
@@ -555,13 +547,13 @@ export default function App() {
           className="absolute bottom-0 left-0 right-0 h-32"
           style={{
             background:
-              "linear-gradient(to bottom, transparent, oklch(0.06 0 0))",
+              "linear-gradient(to bottom, transparent, #fefae0)",
           }}
         />
       </section>
 
       {/* ── About Strip ── */}
-      <section id="about" className="py-20 px-6">
+      <section id="about" className="py-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div ref={aboutRef} className="fade-in">
             <p
@@ -576,7 +568,7 @@ export default function App() {
             </h2>
             <p
               className="text-base leading-relaxed max-w-2xl mx-auto mb-12"
-              style={{ color: "oklch(0.74 0.01 85)" }}
+              style={{ color: "oklch(0.35 0.03 100)" }}
             >
               At The CraveCoach, we believe every celebration deserves a cake
               that's as extraordinary as the moment. Operating from our
@@ -594,14 +586,14 @@ export default function App() {
               { stat: "100%", label: "Eggless Kitchen" },
               { stat: "Daily", label: "Handcrafted Fresh" },
             ].map((s) => (
-              <div key={s.stat} className="card-dark p-8 text-center">
+              <div key={s.stat} className="card-light p-8 text-center">
                 <div className="font-display text-4xl font-black gold-gradient-text mb-2">
                   {s.stat}
                 </div>
                 <div
                   className="text-sm font-medium tracking-wider"
                   style={{
-                    color: "oklch(0.74 0.01 85)",
+                    color: "oklch(0.35 0.03 100)",
                     letterSpacing: "0.1em",
                   }}
                 >
@@ -632,13 +624,13 @@ export default function App() {
                 className="h-px w-32"
                 style={{
                   background:
-                    "linear-gradient(to right, transparent, oklch(0.76 0.16 80), transparent)",
+                    "linear-gradient(to right, transparent, oklch(0.55 0.14 65), transparent)",
                 }}
               />
             </div>
             <p
               className="mt-4 text-sm"
-              style={{ color: "oklch(0.74 0.01 85)" }}
+              style={{ color: "oklch(0.35 0.03 100)" }}
             >
               <span className="text-red-400 font-medium">Note:</span> Please
               book your order 2-3 days in advance
@@ -662,7 +654,7 @@ export default function App() {
                   : "border-transparent hover:border-gold-dim"
                   }`}
                 style={
-                  activeTab !== tab.key ? { color: "oklch(0.74 0.01 85)" } : {}
+                  activeTab !== tab.key ? { color: "oklch(0.35 0.03 100)" } : {}
                 }
                 data-ocid="menu.tab"
               >
@@ -718,13 +710,13 @@ export default function App() {
                     style={{
                       background: "oklch(0.76 0.16 80 / 15%)",
                       border: "1px solid oklch(0.76 0.16 80 / 40%)",
-                      color: "oklch(0.89 0.17 82)",
+                      color: "oklch(0.45 0.16 65)",
                     }}
                   >
                     ⚠️ Minimum order: 6 pieces per item
                   </span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                   {SIDES_TREATS.map((treat, i) => (
                     <TreatCard key={treat.name} {...treat} index={i} />
                   ))}
@@ -742,7 +734,7 @@ export default function App() {
           className="py-16 px-6"
           style={{
             background:
-              "linear-gradient(135deg, oklch(0.10 0.005 260) 0%, oklch(0.08 0.003 260) 100%)",
+              "linear-gradient(135deg, #f6f1d8 0%, #f1ecd0 100%)",
             borderTop: "1px solid oklch(0.76 0.16 80 / 20%)",
           }}
         >
@@ -752,7 +744,7 @@ export default function App() {
             </h2>
             <p
               className="text-sm mb-10"
-              style={{ color: "oklch(0.74 0.01 85)" }}
+              style={{ color: "oklch(0.35 0.03 100)" }}
             >
               Craving a closer look? 🎂 See our latest creations on Instagram!
             </p>
@@ -762,7 +754,7 @@ export default function App() {
                 href="https://instagram.com/the_cravecoach"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-dark p-5 flex flex-col items-center gap-3 no-underline group"
+                className="card-light p-5 flex flex-col items-center gap-3 no-underline group"
                 data-ocid="contact.link"
               >
                 <Instagram
@@ -776,7 +768,7 @@ export default function App() {
               </a>
               <a
                 href="mailto:payjalgoti@gmail.com"
-                className="card-dark p-5 flex flex-col items-center gap-3 no-underline group"
+                className="card-light p-5 flex flex-col items-center gap-3 no-underline group"
                 data-ocid="contact.link"
               >
                 <Mail
@@ -790,7 +782,7 @@ export default function App() {
               </a>
               <a
                 href="tel:+15066889777"
-                className="card-dark p-5 flex flex-col items-center gap-3 no-underline group"
+                className="card-light p-5 flex flex-col items-center gap-3 no-underline group"
                 data-ocid="contact.link"
               >
                 <Phone
@@ -802,11 +794,11 @@ export default function App() {
                   +1(506)688-9777
                 </div>
               </a>
-              <div className="card-dark p-5 flex flex-col items-center gap-3">
+              <div className="card-light p-5 flex flex-col items-center gap-3">
                 <MapPin size={24} className="text-gold" />
                 <div className="text-xs text-muted-foreground">Location</div>
                 <div className="text-gold font-semibold text-sm text-center">
-                  Kenview Dr, Moncton, NB
+                  14, Kenview Dr, Moncton, NB
                 </div>
               </div>
             </div>
@@ -817,7 +809,7 @@ export default function App() {
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
               style={{
                 border: "2px solid oklch(0.76 0.16 80 / 60%)",
-                color: "oklch(0.89 0.17 82)",
+                color: "oklch(0.45 0.16 65)",
                 background: "oklch(0.76 0.16 80 / 10%)",
               }}
               data-ocid="contact.button"
@@ -831,11 +823,11 @@ export default function App() {
         <div
           className="py-6 px-6 text-center"
           style={{
-            background: "oklch(0.06 0 0)",
+            background: "#fefae0",
             borderTop: "1px solid oklch(0.76 0.16 80 / 10%)",
           }}
         >
-          <p className="text-xs" style={{ color: "oklch(0.50 0.01 85)" }}>
+          <p className="text-xs" style={{ color: "oklch(0.35 0.03 100)" }}>
             © {new Date().getFullYear()} The CraveCoach. All Rights Reserved.
           </p>
         </div>
@@ -852,8 +844,8 @@ export default function App() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 animate-pulse-gold"
             style={{
-              background: "oklch(0.76 0.16 80)",
-              color: "oklch(0.06 0 0)",
+              background: "oklch(0.55 0.14 65)",
+              color: "#fefae0",
             }}
             data-ocid="nav.button"
             aria-label="Back to top"

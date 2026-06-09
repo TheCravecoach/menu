@@ -71,9 +71,9 @@ export default {
           ring: "oklch(var(--sidebar-ring))",
         },
         gold: {
-          DEFAULT: "oklch(0.76 0.16 80)",
-          bright: "oklch(0.89 0.17 82)",
-          dim: "oklch(0.60 0.12 80)",
+          DEFAULT: "oklch(0.55 0.14 65)",
+          bright: "oklch(0.45 0.16 65)",
+          dim: "oklch(0.35 0.10 65)",
         },
       },
       borderRadius: {

@@ -85,7 +85,8 @@ async function resizeImagesInDir(dir) {
       }
 
       try {
-        let pipeline = sharp(filePath)
+        const inputBuffer = await fs.readFile(filePath);
+        let pipeline = sharp(inputBuffer)
           .resize(parseInt(width, 10), parseInt(height, 10), {
             fit: "cover",
             withoutEnlargement: false,
