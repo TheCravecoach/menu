@@ -2,6 +2,10 @@ import {
   ArrowUp,
   ChevronRight,
   Cake,
+  CakeSlice,
+  Croissant,
+  Cookie,
+  Donut,
   Instagram,
   Mail,
   MapPin,
@@ -68,38 +72,54 @@ const SIDES_TREATS = [
 
 // ── Sparkle Particles ─────────────────────────────────────────────────────────
 
-const SPARKLES = Array.from({ length: 25 }, (_, i) => ({
+const PARTICLE_ICONS = [Cake, CakeSlice, Croissant, Cookie, Donut];
+
+const SPARKLES = Array.from({ length: 18 }, (_, i) => ({
   id: i,
   x: Math.random() * 100,
   y: Math.random() * 100,
-  size: Math.random() * 4 + 2,
-  duration: Math.random() * 4 + 3,
-  delay: Math.random() * 5,
-  static: Math.random() > 0.5,
+  size: Math.random() * 12 + 14, // sizes from 14px to 26px
+  duration: Math.random() * 8 + 8, // slower float duration (8s to 16s)
+  delay: Math.random() * 10,
+  static: Math.random() > 0.75, // Only 25% static, 75% moving
+  icon: PARTICLE_ICONS[i % PARTICLE_ICONS.length],
 }));
 
 function SparkleParticles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {SPARKLES.map((s) => (
-        <div
-          key={s.id}
-          className={s.static ? "sparkle-static" : "sparkle"}
-          style={
-            {
-              left: `${s.x}%`,
-              top: `${s.y}%`,
-              width: `${s.size}px`,
-              height: `${s.size}px`,
-              "--duration": `${s.duration}s`,
-              "--delay": `${s.delay}s`,
-            } as React.CSSProperties
-          }
-        />
-      ))}
+      {SPARKLES.map((s) => {
+        const Icon = s.icon;
+        return (
+          <div
+            key={s.id}
+            className={s.static ? "sparkle-static" : "sparkle"}
+            style={
+              {
+                left: `${s.x}%`,
+                top: `${s.y}%`,
+                "--duration": `${s.duration}s`,
+                "--delay": `${s.delay}s`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                opacity: s.static ? 0.15 : 0.25,
+              } as React.CSSProperties
+            }
+          >
+            <Icon
+              size={s.size}
+              strokeWidth={1.2}
+              className="text-gold"
+              style={{
+                filter: "drop-shadow(0 2px 4px oklch(0.76 0.16 80 / 30%))",
+              }}
+            />
+          </div>
+        );
+      })}
     </div>
-  );
-}
+  );}
 
 // ── Scroll Fade-In Hook ────────────────────────────────────────────────────────
 
