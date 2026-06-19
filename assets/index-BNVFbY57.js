@@ -14074,18 +14074,34 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$9 = [
+const __iconNode$d = [
   ["path", { d: "m5 12 7-7 7 7", key: "hav0vg" }],
   ["path", { d: "M12 19V5", key: "x0mq9r" }]
 ];
-const ArrowUp = createLucideIcon("arrow-up", __iconNode$9);
+const ArrowUp = createLucideIcon("arrow-up", __iconNode$d);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$8 = [
+const __iconNode$c = [
+  ["circle", { cx: "9", cy: "7", r: "2", key: "1305pl" }],
+  [
+    "path",
+    { d: "M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-3-6-7-8l-3.6 2.6", key: "xle13f" }
+  ],
+  ["path", { d: "M16 13H3", key: "1wpj08" }],
+  ["path", { d: "M16 17H3", key: "3lvfcd" }]
+];
+const CakeSlice = createLucideIcon("cake-slice", __iconNode$c);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$b = [
   ["path", { d: "M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8", key: "1w3rig" }],
   ["path", { d: "M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1", key: "n2jgmb" }],
   ["path", { d: "M2 21h20", key: "1nyx9w" }],
@@ -14096,15 +14112,79 @@ const __iconNode$8 = [
   ["path", { d: "M12 4h.01", key: "1ujb9j" }],
   ["path", { d: "M17 4h.01", key: "1upcoc" }]
 ];
-const Cake = createLucideIcon("cake", __iconNode$8);
+const Cake = createLucideIcon("cake", __iconNode$b);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$7 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-const ChevronRight = createLucideIcon("chevron-right", __iconNode$7);
+const __iconNode$a = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+const ChevronRight = createLucideIcon("chevron-right", __iconNode$a);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$9 = [
+  ["path", { d: "M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5", key: "laymnq" }],
+  ["path", { d: "M8.5 8.5v.01", key: "ue8clq" }],
+  ["path", { d: "M16 15.5v.01", key: "14dtrp" }],
+  ["path", { d: "M12 12v.01", key: "u5ubse" }],
+  ["path", { d: "M11 17v.01", key: "1hyl5a" }],
+  ["path", { d: "M7 14v.01", key: "uct60s" }]
+];
+const Cookie = createLucideIcon("cookie", __iconNode$9);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$8 = [
+  [
+    "path",
+    {
+      d: "m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z",
+      key: "1ozxlb"
+    }
+  ],
+  [
+    "path",
+    {
+      d: "m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83",
+      key: "ffuyb5"
+    }
+  ],
+  ["path", { d: "M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4", key: "osnpzi" }],
+  [
+    "path",
+    {
+      d: "m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2",
+      key: "1vubaw"
+    }
+  ],
+  ["path", { d: "M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5", key: "wxr772" }]
+];
+const Croissant = createLucideIcon("croissant", __iconNode$8);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$7 = [
+  [
+    "path",
+    {
+      d: "M20.5 10a2.5 2.5 0 0 1-2.4-3H18a2.95 2.95 0 0 1-2.6-4.4 10 10 0 1 0 6.3 7.1c-.3.2-.8.3-1.2.3",
+      key: "19sr3x"
+    }
+  ],
+  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+];
+const Donut = createLucideIcon("donut", __iconNode$7);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -22134,31 +22214,52 @@ const SIDES_TREATS = [
   { name: "Almond Caramel Poke Brownie", emoji: "🍯", price: 5 },
   { name: "Nutella Crunch Brownie", emoji: "🥜", price: 5 }
 ];
-const SPARKLES = Array.from({ length: 25 }, (_, i) => ({
+const PARTICLE_ICONS = [Cake, CakeSlice, Croissant, Cookie, Donut];
+const SPARKLES = Array.from({ length: 18 }, (_, i) => ({
   id: i,
   x: Math.random() * 100,
   y: Math.random() * 100,
-  size: Math.random() * 4 + 2,
-  duration: Math.random() * 4 + 3,
-  delay: Math.random() * 5,
-  static: Math.random() > 0.5
+  size: Math.random() * 12 + 14,
+  // sizes from 14px to 26px
+  duration: Math.random() * 8 + 8,
+  // slower float duration (8s to 16s)
+  delay: Math.random() * 10,
+  static: Math.random() > 0.75,
+  // Only 25% static, 75% moving
+  icon: PARTICLE_ICONS[i % PARTICLE_ICONS.length]
 }));
 function SparkleParticles() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 overflow-hidden pointer-events-none", children: SPARKLES.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      className: s.static ? "sparkle-static" : "sparkle",
-      style: {
-        left: `${s.x}%`,
-        top: `${s.y}%`,
-        width: `${s.size}px`,
-        height: `${s.size}px`,
-        "--duration": `${s.duration}s`,
-        "--delay": `${s.delay}s`
-      }
-    },
-    s.id
-  )) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 overflow-hidden pointer-events-none", children: SPARKLES.map((s) => {
+    const Icon2 = s.icon;
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: s.static ? "sparkle-static" : "sparkle",
+        style: {
+          left: `${s.x}%`,
+          top: `${s.y}%`,
+          "--duration": `${s.duration}s`,
+          "--delay": `${s.delay}s`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: s.static ? 0.15 : 0.25
+        },
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Icon2,
+          {
+            size: s.size,
+            strokeWidth: 1.2,
+            className: "text-gold",
+            style: {
+              filter: "drop-shadow(0 2px 4px oklch(0.76 0.16 80 / 30%))"
+            }
+          }
+        )
+      },
+      s.id
+    );
+  }) });
 }
 function useFadeIn() {
   const ref = reactExports.useRef(null);
