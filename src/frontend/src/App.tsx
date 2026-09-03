@@ -13,6 +13,11 @@ import {
   Phone,
   Share2,
   X,
+  Star,
+  Sparkles,
+  ShieldCheck,
+  HeartHandshake,
+  Clock,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -70,6 +75,17 @@ const SIDES_TREATS = [
   { name: "Nutella Crunch Brownie", emoji: "🥜", price: 5.0 },
 ];
 
+// ── Marquee Ribbon Items (Skiper UI Style) ────────────────────────────────────
+
+const MARQUEE_ITEMS = [
+  "✨ 100% PURE EGGLESS KITCHEN",
+  "⭐ 5.0 RATED ON GOOGLE",
+  "🎂 1160+ HAPPY CUSTOMER CELEBRATIONS",
+  "📍 HANDCRAFTED IN MONCTON, NB",
+  "🍫 PREMIUM HOMEMADE CAKES",
+  "🧁 CUSTOM ARTISANAL BROWNIES & TREATS",
+];
+
 // ── Sparkle Particles ─────────────────────────────────────────────────────────
 
 const PARTICLE_ICONS = [Cake, CakeSlice, Croissant, Cookie, Donut];
@@ -78,10 +94,10 @@ const SPARKLES = Array.from({ length: 18 }, (_, i) => ({
   id: i,
   x: Math.random() * 100,
   y: Math.random() * 100,
-  size: Math.random() * 12 + 14, // sizes from 14px to 26px
-  duration: Math.random() * 8 + 8, // slower float duration (8s to 16s)
+  size: Math.random() * 12 + 14,
+  duration: Math.random() * 8 + 8,
   delay: Math.random() * 10,
-  static: Math.random() > 0.75, // Only 25% static, 75% moving
+  static: Math.random() > 0.75,
   icon: PARTICLE_ICONS[i % PARTICLE_ICONS.length],
 }));
 
@@ -119,7 +135,8 @@ function SparkleParticles() {
         );
       })}
     </div>
-  );}
+  );
+}
 
 // ── Scroll Fade-In Hook ────────────────────────────────────────────────────────
 
@@ -163,16 +180,17 @@ function CakeCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.04, duration: 0.4 }}
-      className="py-4 border-b border-border/50 flex flex-col items-center text-center gap-3"
+      whileHover={{ y: -4, transition: { duration: 0.2 } }}
+      className="p-5 rounded-2xl bg-white/60 border border-black/5 hover:border-gold/50 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center gap-3 relative group overflow-hidden"
       data-ocid={`menu.item.${index + 1}`}
     >
-      <div className="flex flex-col items-center gap-2">
-        <span className="text-3xl">{emoji}</span>
-        <h3 className="font-display font-semibold text-foreground leading-tight text-sm md:text-base">
-          {name}
-        </h3>
+      <div className="text-3xl transition-transform duration-300 group-hover:scale-125">
+        {emoji}
       </div>
-      <div className="flex items-center justify-center gap-6 mt-1">
+      <h3 className="font-display font-semibold text-foreground leading-tight text-sm md:text-base">
+        {name}
+      </h3>
+      <div className="flex items-center justify-center gap-6 mt-1 w-full pt-2 border-t border-black/5">
         <div className="flex flex-col items-center">
           <span className="text-[10px] uppercase tracking-wider text-muted-foreground">500g</span>
           <span className="font-bold text-gold text-sm">${price500}</span>
@@ -203,7 +221,8 @@ function TreatCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.06, duration: 0.4 }}
-      className="py-4 border-b border-border/50 flex items-center justify-between gap-4"
+      whileHover={{ scale: 1.02 }}
+      className="p-5 rounded-2xl bg-white/60 border border-black/5 hover:border-gold/50 shadow-sm flex items-center justify-between gap-4"
       data-ocid={`treats.item.${index + 1}`}
     >
       <div className="flex items-center gap-3">
@@ -271,6 +290,7 @@ export default function App() {
 
   const navLinks = [
     { label: "HOME", id: "home" },
+    { label: "HIGHLIGHTS", id: "highlights" },
     { label: "MENU", id: "menu" },
     { label: "ABOUT", id: "about" },
     { label: "CONTACT", id: "contact" },
@@ -296,7 +316,7 @@ export default function App() {
 
   return (
     <div
-      className="min-h-screen"
+      className="min-h-screen selection:bg-gold/30 selection:text-foreground"
       style={{
         background: "#fefae0",
       }}
@@ -323,7 +343,6 @@ export default function App() {
                 whileTap={{ scale: 0.95 }}
                 className="flex flex-col items-center"
               >
-                {/* Premium Emblem */}
                 <motion.div
                   animate={{ y: [0, -3, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
@@ -332,7 +351,6 @@ export default function App() {
                   <Cake size={32} strokeWidth={1.5} className="text-gold drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]" />
                 </motion.div>
 
-                {/* Text Group */}
                 <div className="flex flex-col items-center">
                   <div className="font-display font-bold tracking-tight text-base sm:text-lg md:text-xl lg:text-2xl leading-none shimmer-text drop-shadow-sm text-center">
                     THE CRAVECOACH
@@ -434,12 +452,11 @@ export default function App() {
         </AnimatePresence>
       </nav>
 
-      {/* ── Hero Section ── */}
+      {/* ── Hero Section with Skiper Spotlight Glow ── */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12"
       >
-        {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -447,30 +464,39 @@ export default function App() {
               "url('/assets/generated/hero-cakes.dim_1200x700.jpg')",
           }}
         />
-        {/* Dark overlay */}
         <div className="absolute inset-0 hero-overlay" />
 
-        {/* Sparkles */}
+        {/* Skiper Ambient Radial Light */}
+        <div 
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] rounded-full blur-[140px] pointer-events-none"
+          style={{ background: "oklch(0.76 0.16 80 / 25%)" }}
+        />
+
         <SparkleParticles />
 
-        {/* Hero content */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-32 text-center">
+          {/* Animated Google 5.0 Star Pill */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-widest mb-8"
+              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold tracking-wider mb-8 shadow-sm backdrop-blur-md"
               style={{
-                border: "1px solid oklch(0.76 0.16 80 / 40%)",
-                background: "oklch(0.76 0.16 80 / 10%)",
-                color: "oklch(0.45 0.16 65)",
-                letterSpacing: "0.15em",
+                border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
+                background: "rgba(255, 255, 255, 0.85)",
+                color: "oklch(0.35 0.03 100)",
               }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-              100% EGGLESS · HANDCRAFTED · MONCTON, NB
+              <div className="flex text-amber-500">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={13} className="fill-current" />
+                ))}
+              </div>
+              <span className="font-bold text-foreground">5.0 Star Google Rating</span>
+              <span className="text-black/30">•</span>
+              <span className="font-medium text-gold">100% Eggless Kitchen</span>
             </div>
           </motion.div>
 
@@ -496,12 +522,12 @@ export default function App() {
             Crafting Sweet Memories in Moncton, NB — Fresh, Handmade with Love
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* Interactive Hero CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.9 }}
-            className="flex flex-wrap justify-center gap-4 mb-14"
+            className="flex flex-wrap justify-center items-center gap-4 mb-14"
           >
             <button
               type="button"
@@ -517,18 +543,34 @@ export default function App() {
             >
               Browse Menu <ChevronRight size={16} />
             </button>
+
             <a
-              href="https://instagram.com/the_cravecoach"
+              href="https://wa.me/15066889777"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
+              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105 shadow-lg shadow-pink-900/10"
               style={{
                 background: "oklch(0.55 0.14 65)",
                 color: "#fefae0",
               }}
               data-ocid="hero.secondary_button"
             >
-              <Instagram size={16} /> Order Now
+              Order on WhatsApp
+            </a>
+
+            <a
+              href="https://instagram.com/the_cravecoach"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
+              style={{
+                background: "rgba(255, 255, 255, 0.8)",
+                border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
+                color: "oklch(0.35 0.03 100)",
+              }}
+              data-ocid="hero.ig_button"
+            >
+              <Instagram size={16} /> Instagram
             </a>
           </motion.div>
 
@@ -544,14 +586,14 @@ export default function App() {
               { icon: "🥚", text: "100% Eggless" },
               { icon: "🎂", text: "Book 2-3 Days Prior" },
               { icon: "🚚", text: "Free Delivery within 1km" },
-              { icon: "💲", text: "Extra charges for customization" },
+              { icon: "💲", text: "Extra Charges for Customization" },
             ].map((badge) => (
               <div
                 key={badge.text}
                 className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium"
                 style={{
-                  background: "rgba(255, 255, 255, 0.8)",
-                  border: "1px solid rgba(0, 0, 0, 0.1)",
+                  background: "rgba(255, 255, 255, 0.85)",
+                  border: "1px solid rgba(0, 0, 0, 0.08)",
                   color: "oklch(0.35 0.03 100)",
                 }}
               >
@@ -562,14 +604,113 @@ export default function App() {
           </motion.div>
         </div>
 
-        {/* Bottom fade */}
         <div
           className="absolute bottom-0 left-0 right-0 h-32"
           style={{
-            background:
-              "linear-gradient(to bottom, transparent, #fefae0)",
+            background: "linear-gradient(to bottom, transparent, #fefae0)",
           }}
         />
+      </section>
+
+      {/* ── Skiper UI Infinite Ribbon Marquee ── */}
+      <div className="relative w-full overflow-hidden py-4 border-y border-black/5 bg-white/40 backdrop-blur-sm">
+        <motion.div
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+          className="flex whitespace-nowrap gap-8 text-xs font-bold tracking-[0.2em] text-gold uppercase"
+        >
+          {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, idx) => (
+            <span key={idx} className="flex items-center gap-3">
+              {item}
+              <span className="text-black/20">•</span>
+            </span>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* ── Skiper UI Bento Grid Showcase ── */}
+      <section id="highlights" className="py-20 px-6 max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <p
+            className="text-xs font-semibold tracking-widest text-gold mb-3 uppercase"
+            style={{ letterSpacing: "0.25em" }}
+          >
+            Why Choose The CraveCoach
+          </p>
+          <h2 className="font-display text-3xl md:text-5xl font-black uppercase shimmer-text mb-4">
+            CRAFTED FOR PERFECTION
+          </h2>
+          <div className="h-px w-28 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1 */}
+          <motion.div
+            whileHover={{ y: -6 }}
+            className="p-8 rounded-3xl bg-white/70 border border-black/10 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-gold/15 text-gold flex items-center justify-center mb-6">
+                <ShieldCheck size={26} />
+              </div>
+              <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                100% Dedicated Eggless
+              </h3>
+              <p className="text-xs leading-relaxed" style={{ color: "oklch(0.35 0.03 100)" }}>
+                Baked with premium, strictly vegetarian ingredients without compromising on moist sponge texture or decadent rich flavor.
+              </p>
+            </div>
+            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-gold">
+              <span>Pure Ingredients</span>
+              <Sparkles size={14} />
+            </div>
+          </motion.div>
+
+          {/* Card 2 (Special Center Accent) */}
+          <motion.div
+            whileHover={{ y: -6 }}
+            className="p-8 rounded-3xl bg-gradient-to-b from-white/90 to-white/50 border-2 border-gold/40 shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+          >
+            <div className="absolute -top-12 -right-12 w-36 h-36 bg-gold/10 rounded-full blur-2xl pointer-events-none" />
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-gold text-white flex items-center justify-center mb-6 shadow-md shadow-gold/30">
+                <Sparkles size={26} />
+              </div>
+              <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                Custom Theme Artistry
+              </h3>
+              <p className="text-xs leading-relaxed" style={{ color: "oklch(0.35 0.03 100)" }}>
+                From intricate floral vintage tiers to milestone baby shower themes, every cake is designed uniquely to match your vision.
+              </p>
+            </div>
+            <div className="mt-6">
+              <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-gold/10 text-gold-bright">
+                Personalized Orders
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Card 3 */}
+          <motion.div
+            whileHover={{ y: -6 }}
+            className="p-8 rounded-3xl bg-white/70 border border-black/10 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="w-12 h-12 rounded-2xl bg-gold/15 text-gold flex items-center justify-center mb-6">
+                <Clock size={26} />
+              </div>
+              <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                Freshly Baked to Order
+              </h3>
+              <p className="text-xs leading-relaxed" style={{ color: "oklch(0.35 0.03 100)" }}>
+                We never freeze or bulk store. Your orders are hand-whipped and decorated fresh right before pickup or delivery in Moncton.
+              </p>
+            </div>
+            <div className="mt-6 flex items-center gap-1 text-xs font-bold text-gold">
+              <span>2-3 Days Advance Booking</span>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* ── About Strip ── */}
@@ -606,7 +747,7 @@ export default function App() {
               { stat: "100%", label: "Eggless Kitchen" },
               { stat: "Daily", label: "Handcrafted Fresh" },
             ].map((s) => (
-              <div key={s.stat} className="card-light p-8 text-center">
+              <div key={s.stat} className="card-light p-8 text-center hover:scale-105 transition-transform duration-300">
                 <div className="font-display text-4xl font-black gold-gradient-text mb-2">
                   {s.stat}
                 </div>
@@ -628,7 +769,6 @@ export default function App() {
       {/* ── Menu Section ── */}
       <section id="menu" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Section header */}
           <div className="text-center mb-12">
             <p
               className="text-xs font-semibold tracking-widest text-gold mb-3 uppercase"
@@ -670,7 +810,7 @@ export default function App() {
                 aria-selected={activeTab === tab.key}
                 onClick={() => setActiveTab(tab.key)}
                 className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 border ${activeTab === tab.key
-                  ? "tab-active"
+                  ? "tab-active shadow-md"
                   : "border-transparent hover:border-gold-dim"
                   }`}
                 style={
@@ -749,7 +889,6 @@ export default function App() {
 
       {/* ── Contact / Footer ── */}
       <footer id="contact" className="mt-12">
-        {/* Contact strip */}
         <div
           className="py-16 px-6"
           style={{
@@ -774,7 +913,7 @@ export default function App() {
                 href="https://instagram.com/the_cravecoach"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-light p-5 flex flex-col items-center gap-3 no-underline group"
+                className="card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform"
                 data-ocid="contact.link"
               >
                 <Instagram
@@ -788,7 +927,7 @@ export default function App() {
               </a>
               <a
                 href="mailto:payjalgoti@gmail.com"
-                className="card-light p-5 flex flex-col items-center gap-3 no-underline group"
+                className="card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform"
                 data-ocid="contact.link"
               >
                 <Mail
@@ -802,7 +941,7 @@ export default function App() {
               </a>
               <a
                 href="tel:+15066889777"
-                className="card-light p-5 flex flex-col items-center gap-3 no-underline group"
+                className="card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform"
                 data-ocid="contact.link"
               >
                 <Phone
@@ -814,7 +953,7 @@ export default function App() {
                   +1(506)688-9777
                 </div>
               </a>
-              <div className="card-light p-5 flex flex-col items-center gap-3">
+              <div className="card-light p-5 flex flex-col items-center gap-3 hover:scale-105 transition-transform">
                 <MapPin size={24} className="text-gold" />
                 <div className="text-xs text-muted-foreground">Location</div>
                 <div className="text-gold font-semibold text-sm text-center">
@@ -839,7 +978,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Copyright bar */}
         <div
           className="py-6 px-6 text-center"
           style={{
