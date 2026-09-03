@@ -14074,18 +14074,18 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$d = [
+const __iconNode$h = [
   ["path", { d: "m5 12 7-7 7 7", key: "hav0vg" }],
   ["path", { d: "M12 19V5", key: "x0mq9r" }]
 ];
-const ArrowUp = createLucideIcon("arrow-up", __iconNode$d);
+const ArrowUp = createLucideIcon("arrow-up", __iconNode$h);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$c = [
+const __iconNode$g = [
   ["circle", { cx: "9", cy: "7", r: "2", key: "1305pl" }],
   [
     "path",
@@ -14094,14 +14094,14 @@ const __iconNode$c = [
   ["path", { d: "M16 13H3", key: "1wpj08" }],
   ["path", { d: "M16 17H3", key: "3lvfcd" }]
 ];
-const CakeSlice = createLucideIcon("cake-slice", __iconNode$c);
+const CakeSlice = createLucideIcon("cake-slice", __iconNode$g);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$b = [
+const __iconNode$f = [
   ["path", { d: "M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8", key: "1w3rig" }],
   ["path", { d: "M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1", key: "n2jgmb" }],
   ["path", { d: "M2 21h20", key: "1nyx9w" }],
@@ -14112,22 +14112,33 @@ const __iconNode$b = [
   ["path", { d: "M12 4h.01", key: "1ujb9j" }],
   ["path", { d: "M17 4h.01", key: "1upcoc" }]
 ];
-const Cake = createLucideIcon("cake", __iconNode$b);
+const Cake = createLucideIcon("cake", __iconNode$f);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$a = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-const ChevronRight = createLucideIcon("chevron-right", __iconNode$a);
+const __iconNode$e = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+const ChevronRight = createLucideIcon("chevron-right", __iconNode$e);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$9 = [
+const __iconNode$d = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
+];
+const Clock = createLucideIcon("clock", __iconNode$d);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$c = [
   ["path", { d: "M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5", key: "laymnq" }],
   ["path", { d: "M8.5 8.5v.01", key: "ue8clq" }],
   ["path", { d: "M16 15.5v.01", key: "14dtrp" }],
@@ -14135,14 +14146,14 @@ const __iconNode$9 = [
   ["path", { d: "M11 17v.01", key: "1hyl5a" }],
   ["path", { d: "M7 14v.01", key: "uct60s" }]
 ];
-const Cookie = createLucideIcon("cookie", __iconNode$9);
+const Cookie = createLucideIcon("cookie", __iconNode$c);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$8 = [
+const __iconNode$b = [
   [
     "path",
     {
@@ -14167,7 +14178,47 @@ const __iconNode$8 = [
   ],
   ["path", { d: "M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5", key: "wxr772" }]
 ];
-const Croissant = createLucideIcon("croissant", __iconNode$8);
+const Croissant = createLucideIcon("croissant", __iconNode$b);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$a = [
+  [
+    "path",
+    {
+      d: "M20.5 10a2.5 2.5 0 0 1-2.4-3H18a2.95 2.95 0 0 1-2.6-4.4 10 10 0 1 0 6.3 7.1c-.3.2-.8.3-1.2.3",
+      key: "19sr3x"
+    }
+  ],
+  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+];
+const Donut = createLucideIcon("donut", __iconNode$a);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$9 = [
+  ["rect", { width: "20", height: "20", x: "2", y: "2", rx: "5", ry: "5", key: "2e1cvw" }],
+  ["path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z", key: "9exkf1" }],
+  ["line", { x1: "17.5", x2: "17.51", y1: "6.5", y2: "6.5", key: "r4j83e" }]
+];
+const Instagram = createLucideIcon("instagram", __iconNode$9);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$8 = [
+  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
+  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
+];
+const Mail = createLucideIcon("mail", __iconNode$8);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -14178,13 +14229,13 @@ const __iconNode$7 = [
   [
     "path",
     {
-      d: "M20.5 10a2.5 2.5 0 0 1-2.4-3H18a2.95 2.95 0 0 1-2.6-4.4 10 10 0 1 0 6.3 7.1c-.3.2-.8.3-1.2.3",
-      key: "19sr3x"
+      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+      key: "1r0f0z"
     }
   ],
-  ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
+  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-const Donut = createLucideIcon("donut", __iconNode$7);
+const MapPin = createLucideIcon("map-pin", __iconNode$7);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -14192,11 +14243,11 @@ const Donut = createLucideIcon("donut", __iconNode$7);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$6 = [
-  ["rect", { width: "20", height: "20", x: "2", y: "2", rx: "5", ry: "5", key: "2e1cvw" }],
-  ["path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z", key: "9exkf1" }],
-  ["line", { x1: "17.5", x2: "17.51", y1: "6.5", y2: "6.5", key: "r4j83e" }]
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
 ];
-const Instagram = createLucideIcon("instagram", __iconNode$6);
+const Menu = createLucideIcon("menu", __iconNode$6);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -14204,10 +14255,15 @@ const Instagram = createLucideIcon("instagram", __iconNode$6);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$5 = [
-  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
-  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
+  [
+    "path",
+    {
+      d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
+      key: "9njp5v"
+    }
+  ]
 ];
-const Mail = createLucideIcon("mail", __iconNode$5);
+const Phone = createLucideIcon("phone", __iconNode$5);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -14215,16 +14271,13 @@ const Mail = createLucideIcon("mail", __iconNode$5);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$4 = [
-  [
-    "path",
-    {
-      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
-      key: "1r0f0z"
-    }
-  ],
-  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
+  ["circle", { cx: "18", cy: "5", r: "3", key: "gq8acd" }],
+  ["circle", { cx: "6", cy: "12", r: "3", key: "w7nqdw" }],
+  ["circle", { cx: "18", cy: "19", r: "3", key: "1xt0gg" }],
+  ["line", { x1: "8.59", x2: "15.42", y1: "13.51", y2: "17.49", key: "47mynk" }],
+  ["line", { x1: "15.41", x2: "8.59", y1: "6.51", y2: "10.49", key: "1n3mei" }]
 ];
-const MapPin = createLucideIcon("map-pin", __iconNode$4);
+const Share2 = createLucideIcon("share-2", __iconNode$4);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -14232,11 +14285,16 @@ const MapPin = createLucideIcon("map-pin", __iconNode$4);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$3 = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
+  [
+    "path",
+    {
+      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+      key: "oel41y"
+    }
+  ],
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
 ];
-const Menu = createLucideIcon("menu", __iconNode$3);
+const ShieldCheck = createLucideIcon("shield-check", __iconNode$3);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -14247,12 +14305,16 @@ const __iconNode$2 = [
   [
     "path",
     {
-      d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
-      key: "9njp5v"
+      d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z",
+      key: "4pj2yx"
     }
-  ]
+  ],
+  ["path", { d: "M20 3v4", key: "1olli1" }],
+  ["path", { d: "M22 5h-4", key: "1gvqau" }],
+  ["path", { d: "M4 17v2", key: "vumght" }],
+  ["path", { d: "M5 18H3", key: "zchphs" }]
 ];
-const Phone = createLucideIcon("phone", __iconNode$2);
+const Sparkles = createLucideIcon("sparkles", __iconNode$2);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -14260,13 +14322,15 @@ const Phone = createLucideIcon("phone", __iconNode$2);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$1 = [
-  ["circle", { cx: "18", cy: "5", r: "3", key: "gq8acd" }],
-  ["circle", { cx: "6", cy: "12", r: "3", key: "w7nqdw" }],
-  ["circle", { cx: "18", cy: "19", r: "3", key: "1xt0gg" }],
-  ["line", { x1: "8.59", x2: "15.42", y1: "13.51", y2: "17.49", key: "47mynk" }],
-  ["line", { x1: "15.41", x2: "8.59", y1: "6.51", y2: "10.49", key: "1n3mei" }]
+  [
+    "path",
+    {
+      d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
+      key: "r04s7s"
+    }
+  ]
 ];
-const Share2 = createLucideIcon("share-2", __iconNode$1);
+const Star = createLucideIcon("star", __iconNode$1);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -22214,18 +22278,23 @@ const SIDES_TREATS = [
   { name: "Almond Caramel Poke Brownie", emoji: "🍯", price: 5 },
   { name: "Nutella Crunch Brownie", emoji: "🥜", price: 5 }
 ];
+const MARQUEE_ITEMS = [
+  "✨ 100% PURE EGGLESS KITCHEN",
+  "⭐ 5.0 RATED ON GOOGLE",
+  "🎂 1160+ HAPPY CUSTOMER CELEBRATIONS",
+  "📍 HANDCRAFTED IN MONCTON, NB",
+  "🍫 PREMIUM HOMEMADE CAKES",
+  "🧁 CUSTOM ARTISANAL BROWNIES & TREATS"
+];
 const PARTICLE_ICONS = [Cake, CakeSlice, Croissant, Cookie, Donut];
 const SPARKLES = Array.from({ length: 18 }, (_, i) => ({
   id: i,
   x: Math.random() * 100,
   y: Math.random() * 100,
   size: Math.random() * 12 + 14,
-  // sizes from 14px to 26px
   duration: Math.random() * 8 + 8,
-  // slower float duration (8s to 16s)
   delay: Math.random() * 10,
   static: Math.random() > 0.75,
-  // Only 25% static, 75% moving
   icon: PARTICLE_ICONS[i % PARTICLE_ICONS.length]
 }));
 function SparkleParticles() {
@@ -22293,14 +22362,13 @@ function CakeCard({
       initial: { opacity: 0, y: 20 },
       animate: { opacity: 1, y: 0 },
       transition: { delay: index2 * 0.04, duration: 0.4 },
-      className: "py-4 border-b border-border/50 flex flex-col items-center text-center gap-3",
+      whileHover: { y: -4, transition: { duration: 0.2 } },
+      className: "p-5 rounded-2xl bg-white/60 border border-black/5 hover:border-gold/50 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center gap-3 relative group overflow-hidden",
       "data-ocid": `menu.item.${index2 + 1}`,
       children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-3xl", children: emoji }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-semibold text-foreground leading-tight text-sm md:text-base", children: name })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-6 mt-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-3xl transition-transform duration-300 group-hover:scale-125", children: emoji }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-semibold text-foreground leading-tight text-sm md:text-base", children: name }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-6 mt-1 w-full pt-2 border-t border-black/5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] uppercase tracking-wider text-muted-foreground", children: "500g" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-bold text-gold text-sm", children: [
@@ -22333,7 +22401,8 @@ function TreatCard({
       initial: { opacity: 0, y: 20 },
       animate: { opacity: 1, y: 0 },
       transition: { delay: index2 * 0.06, duration: 0.4 },
-      className: "py-4 border-b border-border/50 flex items-center justify-between gap-4",
+      whileHover: { scale: 1.02 },
+      className: "p-5 rounded-2xl bg-white/60 border border-black/5 hover:border-gold/50 shadow-sm flex items-center justify-between gap-4",
       "data-ocid": `treats.item.${index2 + 1}`,
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
@@ -22393,6 +22462,7 @@ function App() {
   }, []);
   const navLinks = [
     { label: "HOME", id: "home" },
+    { label: "HIGHLIGHTS", id: "highlights" },
     { label: "MENU", id: "menu" },
     { label: "ABOUT", id: "about" },
     { label: "CONTACT", id: "contact" }
@@ -22417,7 +22487,7 @@ function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "div",
     {
-      className: "min-h-screen",
+      className: "min-h-screen selection:bg-gold/30 selection:text-foreground",
       style: {
         background: "#fefae0"
       },
@@ -22569,7 +22639,7 @@ function App() {
           "section",
           {
             id: "home",
-            className: "relative min-h-screen flex items-center justify-center overflow-hidden",
+            className: "relative min-h-screen flex items-center justify-center overflow-hidden pt-12",
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "div",
@@ -22581,6 +22651,13 @@ function App() {
                 }
               ),
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 hero-overlay" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "div",
+                {
+                  className: "absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] rounded-full blur-[140px] pointer-events-none",
+                  style: { background: "oklch(0.76 0.16 80 / 25%)" }
+                }
+              ),
               /* @__PURE__ */ jsxRuntimeExports.jsx(SparkleParticles, {}),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative z-10 max-w-5xl mx-auto px-6 py-32 text-center", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -22592,16 +22669,17 @@ function App() {
                     children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "div",
                       {
-                        className: "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-widest mb-8",
+                        className: "inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold tracking-wider mb-8 shadow-sm backdrop-blur-md",
                         style: {
-                          border: "1px solid oklch(0.76 0.16 80 / 40%)",
-                          background: "oklch(0.76 0.16 80 / 10%)",
-                          color: "oklch(0.45 0.16 65)",
-                          letterSpacing: "0.15em"
+                          border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
+                          background: "rgba(255, 255, 255, 0.85)",
+                          color: "oklch(0.35 0.03 100)"
                         },
                         children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-gold animate-pulse" }),
-                          "100% EGGLESS · HANDCRAFTED · MONCTON, NB"
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex text-amber-500", children: [...Array(5)].map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { size: 13, className: "fill-current" }, i)) }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-foreground", children: "5.0 Star Google Rating" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-black/30", children: "•" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-medium text-gold", children: "100% Eggless Kitchen" })
                         ]
                       }
                     )
@@ -22640,7 +22718,7 @@ function App() {
                     initial: { opacity: 0, y: 20 },
                     animate: { opacity: 1, y: 0 },
                     transition: { duration: 0.7, delay: 0.9 },
-                    className: "flex flex-wrap justify-center gap-4 mb-14",
+                    className: "flex flex-wrap justify-center items-center gap-4 mb-14",
                     children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsxs(
                         "button",
@@ -22661,21 +22739,37 @@ function App() {
                           ]
                         }
                       ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "a",
+                        {
+                          href: "https://wa.me/15066889777",
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                          className: "flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105 shadow-lg shadow-pink-900/10",
+                          style: {
+                            background: "oklch(0.55 0.14 65)",
+                            color: "#fefae0"
+                          },
+                          "data-ocid": "hero.secondary_button",
+                          children: "Order on WhatsApp"
+                        }
+                      ),
                       /* @__PURE__ */ jsxRuntimeExports.jsxs(
                         "a",
                         {
                           href: "https://instagram.com/the_cravecoach",
                           target: "_blank",
                           rel: "noopener noreferrer",
-                          className: "flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105",
+                          className: "flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105",
                           style: {
-                            background: "oklch(0.55 0.14 65)",
-                            color: "#fefae0"
+                            background: "rgba(255, 255, 255, 0.8)",
+                            border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
+                            color: "oklch(0.35 0.03 100)"
                           },
-                          "data-ocid": "hero.secondary_button",
+                          "data-ocid": "hero.ig_button",
                           children: [
                             /* @__PURE__ */ jsxRuntimeExports.jsx(Instagram, { size: 16 }),
-                            " Order Now"
+                            " Instagram"
                           ]
                         }
                       )
@@ -22694,14 +22788,14 @@ function App() {
                       { icon: "🥚", text: "100% Eggless" },
                       { icon: "🎂", text: "Book 2-3 Days Prior" },
                       { icon: "🚚", text: "Free Delivery within 1km" },
-                      { icon: "💲", text: "Extra charges for customization" }
+                      { icon: "💲", text: "Extra Charges for Customization" }
                     ].map((badge) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "div",
                       {
                         className: "flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium",
                         style: {
-                          background: "rgba(255, 255, 255, 0.8)",
-                          border: "1px solid rgba(0, 0, 0, 0.1)",
+                          background: "rgba(255, 255, 255, 0.85)",
+                          border: "1px solid rgba(0, 0, 0, 0.08)",
                           color: "oklch(0.35 0.03 100)"
                         },
                         children: [
@@ -22726,6 +22820,83 @@ function App() {
             ]
           }
         ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative w-full overflow-hidden py-4 border-y border-black/5 bg-white/40 backdrop-blur-sm", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          motion.div,
+          {
+            animate: { x: ["0%", "-50%"] },
+            transition: { ease: "linear", duration: 25, repeat: Infinity },
+            className: "flex whitespace-nowrap gap-8 text-xs font-bold tracking-[0.2em] text-gold uppercase",
+            children: [...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-3", children: [
+              item,
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-black/20", children: "•" })
+            ] }, idx))
+          }
+        ) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "highlights", className: "py-20 px-6 max-w-6xl mx-auto", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "p",
+              {
+                className: "text-xs font-semibold tracking-widest text-gold mb-3 uppercase",
+                style: { letterSpacing: "0.25em" },
+                children: "Why Choose The CraveCoach"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display text-3xl md:text-5xl font-black uppercase shimmer-text mb-4", children: "CRAFTED FOR PERFECTION" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-px w-28 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              motion.div,
+              {
+                whileHover: { y: -6 },
+                className: "p-8 rounded-3xl bg-white/70 border border-black/10 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-12 rounded-2xl bg-gold/15 text-gold flex items-center justify-center mb-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { size: 26 }) }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-bold text-xl text-foreground mb-2", children: "100% Dedicated Eggless" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs leading-relaxed", style: { color: "oklch(0.35 0.03 100)" }, children: "Baked with premium, strictly vegetarian ingredients without compromising on moist sponge texture or decadent rich flavor." })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 flex items-center gap-1 text-xs font-bold text-gold", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Pure Ingredients" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { size: 14 })
+                  ] })
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              motion.div,
+              {
+                whileHover: { y: -6 },
+                className: "p-8 rounded-3xl bg-gradient-to-b from-white/90 to-white/50 border-2 border-gold/40 shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-12 -right-12 w-36 h-36 bg-gold/10 rounded-full blur-2xl pointer-events-none" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-12 rounded-2xl bg-gold text-white flex items-center justify-center mb-6 shadow-md shadow-gold/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { size: 26 }) }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-bold text-xl text-foreground mb-2", children: "Custom Theme Artistry" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs leading-relaxed", style: { color: "oklch(0.35 0.03 100)" }, children: "From intricate floral vintage tiers to milestone baby shower themes, every cake is designed uniquely to match your vision." })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-gold/10 text-gold-bright", children: "Personalized Orders" }) })
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              motion.div,
+              {
+                whileHover: { y: -6 },
+                className: "p-8 rounded-3xl bg-white/70 border border-black/10 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-12 rounded-2xl bg-gold/15 text-gold flex items-center justify-center mb-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { size: 26 }) }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-bold text-xl text-foreground mb-2", children: "Freshly Baked to Order" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs leading-relaxed", style: { color: "oklch(0.35 0.03 100)" }, children: "We never freeze or bulk store. Your orders are hand-whipped and decorated fresh right before pickup or delivery in Moncton." })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 flex items-center gap-1 text-xs font-bold text-gold", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "2-3 Days Advance Booking" }) })
+                ]
+              }
+            )
+          ] })
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "about", className: "py-10 px-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto text-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { ref: aboutRef, className: "fade-in", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -22759,7 +22930,7 @@ function App() {
                 { stat: "17+", label: "Premium Flavors" },
                 { stat: "100%", label: "Eggless Kitchen" },
                 { stat: "Daily", label: "Handcrafted Fresh" }
-              ].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-light p-8 text-center", children: [
+              ].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-light p-8 text-center hover:scale-105 transition-transform duration-300", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-4xl font-black gold-gradient-text mb-2", children: s.stat }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "div",
@@ -22820,7 +22991,7 @@ function App() {
                   role: "tab",
                   "aria-selected": activeTab === tab.key,
                   onClick: () => setActiveTab(tab.key),
-                  className: `px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 border ${activeTab === tab.key ? "tab-active" : "border-transparent hover:border-gold-dim"}`,
+                  className: `px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 border ${activeTab === tab.key ? "tab-active shadow-md" : "border-transparent hover:border-gold-dim"}`,
                   style: activeTab !== tab.key ? { color: "oklch(0.35 0.03 100)" } : {},
                   "data-ocid": "menu.tab",
                   children: [
@@ -22912,7 +23083,7 @@ function App() {
                       href: "https://instagram.com/the_cravecoach",
                       target: "_blank",
                       rel: "noopener noreferrer",
-                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group",
+                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform",
                       "data-ocid": "contact.link",
                       children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -22931,7 +23102,7 @@ function App() {
                     "a",
                     {
                       href: "mailto:payjalgoti@gmail.com",
-                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group",
+                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform",
                       "data-ocid": "contact.link",
                       children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -22950,7 +23121,7 @@ function App() {
                     "a",
                     {
                       href: "tel:+15066889777",
-                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group",
+                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform",
                       "data-ocid": "contact.link",
                       children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -22965,7 +23136,7 @@ function App() {
                       ]
                     }
                   ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-light p-5 flex flex-col items-center gap-3", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-light p-5 flex flex-col items-center gap-3 hover:scale-105 transition-transform", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { size: 24, className: "text-gold" }),
                     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-muted-foreground", children: "Location" }),
                     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-sm text-center", children: "14, Kenview Dr, Moncton, NB" })
