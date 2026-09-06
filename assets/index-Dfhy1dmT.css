@@ -858,6 +858,10 @@ body{
   margin-top: 0.5rem;
 }
 
+.mt-3{
+  margin-top: 0.75rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
@@ -1209,6 +1213,10 @@ body{
   min-width: 12rem;
 }
 
+.min-w-\[200px\]{
+  min-width: 200px;
+}
+
 .min-w-\[8rem\]{
   min-width: 8rem;
 }
@@ -1243,6 +1251,10 @@ body{
 
 .max-w-\[calc\(100\%-2rem\)\]{
   max-width: calc(100% - 2rem);
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .max-w-max{
@@ -1564,10 +1576,6 @@ body{
   overflow-wrap: break-word;
 }
 
-.break-all{
-  word-break: break-all;
-}
-
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -1854,6 +1862,10 @@ body{
   padding: 0.5rem;
 }
 
+.p-2\.5{
+  padding: 0.625rem;
+}
+
 .p-3{
   padding: 0.75rem;
 }
@@ -1912,6 +1924,11 @@ body{
   padding-right: 1rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1952,6 +1969,11 @@ body{
   padding-bottom: 0.5rem;
 }
 
+.py-2\.5{
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .py-20{
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1975,6 +1997,11 @@ body{
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-6{
@@ -2275,6 +2302,10 @@ body{
 
 .opacity-0{
   opacity: 0;
+}
+
+.opacity-40{
+  opacity: 0.4;
 }
 
 .opacity-50{
@@ -2947,6 +2978,10 @@ body{
   background-color: oklch(var(--accent) / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-black\/5:hover{
+  background-color: rgb(0 0 0 / 0.05);
+}
+
 .hover\:bg-destructive\/90:hover{
   background-color: oklch(var(--destructive) / 0.9);
 }
@@ -3128,6 +3163,12 @@ body{
   --tw-ring-offset-width: 1px;
 }
 
+.active\:scale-95:active{
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .active\:bg-sidebar-accent:active{
   background-color: oklch(var(--sidebar-accent));
 }
@@ -3160,6 +3201,10 @@ body{
 
 .group:hover .group-hover\:text-gold-bright{
   color: oklch(0.45 0.16 65);
+}
+
+.group:hover .group-hover\:underline{
+  text-decoration-line: underline;
 }
 
 .group\/menu-item:hover .group-hover\/menu-item\:opacity-100{
@@ -4274,6 +4319,11 @@ body{
     padding-right: 1.5rem;
   }
 
+  .sm\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .sm\:pl-2\.5{
     padding-left: 0.625rem;
   }
@@ -4298,6 +4348,11 @@ body{
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .data-\[vaul-drawer-direction\=left\]\:sm\:max-w-sm[data-vaul-drawer-direction="left"]{
@@ -4353,8 +4408,8 @@ body{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .md\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .md\:flex-row{

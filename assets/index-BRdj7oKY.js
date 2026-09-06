@@ -22583,36 +22583,46 @@ function App() {
                   "button",
                   {
                     type: "button",
-                    onClick: () => setMobileMenuOpen(!mobileMenuOpen),
-                    className: "md:hidden p-2 text-gold",
+                    onClick: () => setMobileMenuOpen((prev) => !prev),
+                    "aria-label": "Toggle Navigation Menu",
+                    className: "md:hidden p-2.5 rounded-xl text-gold hover:bg-black/5 active:scale-95 transition-all z-50 focus:outline-none",
                     "data-ocid": "nav.toggle",
-                    children: mobileMenuOpen ? /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 24 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { size: 24 })
+                    children: mobileMenuOpen ? /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 26 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { size: 26 })
                   }
                 )
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { children: mobileMenuOpen && /* @__PURE__ */ jsxRuntimeExports.jsx(
                 motion.div,
                 {
-                  initial: { opacity: 0, height: 0 },
-                  animate: { opacity: 1, height: "auto" },
-                  exit: { opacity: 0, height: 0 },
-                  className: "md:hidden navbar-blur border-t",
-                  style: { borderTopColor: "oklch(0.76 0.16 80 / 20%)" },
+                  initial: { opacity: 0, y: -8 },
+                  animate: { opacity: 1, y: 0 },
+                  exit: { opacity: 0, y: -8 },
+                  transition: { duration: 0.2 },
+                  className: "md:hidden w-full overflow-hidden border-b shadow-xl",
+                  style: {
+                    background: "rgba(254, 250, 224, 0.98)",
+                    backdropFilter: "blur(16px)",
+                    WebkitBackdropFilter: "blur(16px)",
+                    borderBottomColor: "oklch(0.76 0.16 80 / 30%)"
+                  },
                   "data-ocid": "nav.modal",
-                  children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-6 py-4 flex flex-col gap-4", children: [
-                    navLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-6 py-5 flex flex-col gap-2", children: [
+                    navLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "button",
                       {
                         type: "button",
                         onClick: () => scrollTo(link.id),
-                        className: "text-left text-sm font-semibold tracking-widest py-2 border-b transition-colors hover:text-gold",
+                        className: "w-full text-left py-3 px-2 text-sm font-semibold tracking-widest border-b transition-colors hover:text-gold active:bg-gold/10 rounded-lg flex items-center justify-between",
                         style: {
                           color: "oklch(0.35 0.03 100)",
                           borderBottomColor: "oklch(0.76 0.16 80 / 15%)",
                           letterSpacing: "0.15em"
                         },
                         "data-ocid": "nav.link",
-                        children: link.label
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: link.label }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronRight, { size: 14, className: "opacity-40" })
+                        ]
                       },
                       link.id
                     )),
@@ -22620,12 +22630,15 @@ function App() {
                       "button",
                       {
                         type: "button",
-                        onClick: shareMenu,
-                        className: "flex items-center gap-2 py-2 text-sm font-semibold tracking-widest text-gold",
+                        onClick: () => {
+                          setMobileMenuOpen(false);
+                          shareMenu();
+                        },
+                        className: "mt-3 flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold tracking-widest text-gold border border-gold/40 hover:bg-gold/10 transition-colors w-full uppercase",
                         "data-ocid": "nav.button",
                         children: [
                           /* @__PURE__ */ jsxRuntimeExports.jsx(Share2, { size: 16 }),
-                          " SHARE MENU"
+                          " Share Menu"
                         ]
                       }
                     )
@@ -22669,17 +22682,16 @@ function App() {
                     children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "div",
                       {
-                        className: "inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold tracking-wider mb-8 shadow-sm backdrop-blur-md",
+                        className: "inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider mb-8 shadow-sm backdrop-blur-md",
                         style: {
                           border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
-                          background: "rgba(255, 255, 255, 0.85)",
-                          color: "oklch(0.35 0.03 100)"
+                          background: "rgba(255, 255, 255, 0.85)"
                         },
                         children: [
                           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex text-amber-500", children: [...Array(5)].map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { size: 13, className: "fill-current" }, i)) }),
-                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-foreground", children: "5.0 Star Google Rating" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold shimmer-text", children: "5.0 Star Google Rating" }),
                           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-black/30", children: "•" }),
-                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-medium text-gold", children: "100% Eggless Kitchen" })
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold shimmer-text", children: "100% Eggless Kitchen" })
                         ]
                       }
                     )
@@ -22770,6 +22782,25 @@ function App() {
                           children: [
                             /* @__PURE__ */ jsxRuntimeExports.jsx(Instagram, { size: 16 }),
                             " Instagram"
+                          ]
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        "a",
+                        {
+                          href: "https://www.google.com/search?q=the+cravecoach+moncton&sca_esv=d50c116370280445&authuser=5&sxsrf=APpeQntOEJI-EV2FsLs7sZ_j_eqdEshzqA%3A1788679198252&source=hp&ei=HhSdatm_DYzI1sQPusfvwAU&iflsig=ABILxe8AAAAAap0iLuSxyMpXYcgQYy1qCsMX98_rn4Nv&ved=0ahUKEwjZxuihtdmWAxUMpJUCHbrjG1gQ4dUDCCs&uact=5&oq=cravecoach+moncton&gs_lp=Egdnd3Mtd2l6IhJjcmF2ZWNvYWNoIG1vbmN0b24yBxAhGAoYoAEyBxAhGAoYoAFI7ElQng9Y6EZwBHgAkAEAmAH5AaABriGqAQcwLjEwLjExuAEDyAEA-AEBmAIXoALiHqgCCsICChAAGAMYjwEY6gLCAgsQABiABBiKBRiRAsICCxAuGIAEGIoFGJECwgIOEAAYgAQYigUYkQIYsQPCAhEQLhiABBiKBRiRAhjHARjRA8ICCBAAGIAEGLEDwgIKEAAYgAQYigUYQ8ICERAuGIAEGLEDGIMBGMcBGNEDwgILEAAYgAQYsQMYgwHCAhEQLhiABBiKBRiRAhjHARivAcICDRAAGIAEGIoFGEMYsQPCAgoQLhiABBiKBRhDwgIIEC4YgAQYsQPCAgsQLhiABBjHARivAcICBRAAGIAEwgIHEAAYgAQYCsICCRAAGIAEGAoYC8ICBhAAGB4YDcICCxAAGIAEGIoFGIYDmAMP8QVkDeneuPci75IHBjQuMTAuOaAHsFSyBwYwLjEwLjm4B8gewgcIMS4xNS42LjHIB0eACAE&sclient=gws-wiz#lrd=0x4ca0c74b4d59346b:0xe70fcce71830f483,1,,,",
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                          className: "flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105",
+                          style: {
+                            background: "rgba(255, 255, 255, 0.8)",
+                            border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
+                            color: "oklch(0.35 0.03 100)"
+                          },
+                          "data-ocid": "hero.reviews_button",
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex text-amber-500", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { size: 14, className: "fill-current" }) }),
+                            "Reviews"
                           ]
                         }
                       )
@@ -23066,7 +23097,7 @@ function App() {
                 background: "linear-gradient(135deg, #f6f1d8 0%, #f1ecd0 100%)",
                 borderTop: "1px solid oklch(0.76 0.16 80 / 20%)"
               },
-              children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto text-center", children: [
+              children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-full mx-auto px-4 sm:px-8 text-center", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display text-2xl md:text-3xl font-bold mb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "gold-gradient-text", children: "Get in Touch" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "p",
@@ -23076,25 +23107,19 @@ function App() {
                     children: "Craving a closer look? 🎂 See our latest creations on Instagram!"
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 mb-10", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsxs(
                     "a",
                     {
                       href: "https://instagram.com/the_cravecoach",
                       target: "_blank",
                       rel: "noopener noreferrer",
-                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform",
+                      className: "card-light px-3 py-5 flex flex-col items-center justify-center gap-2 no-underline group hover:scale-105 transition-transform",
                       "data-ocid": "contact.link",
                       children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(
-                          Instagram,
-                          {
-                            size: 24,
-                            className: "text-gold group-hover:text-gold-bright transition-colors"
-                          }
-                        ),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-muted-foreground", children: "Instagram" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-sm", children: "@THE_CRAVECOACH" })
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(Instagram, { size: 22, className: "text-gold group-hover:text-gold-bright transition-colors" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] text-muted-foreground", children: "Instagram" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-xs sm:text-sm whitespace-nowrap", children: "@THE_CRAVECOACH" })
                       ]
                     }
                   ),
@@ -23102,18 +23127,12 @@ function App() {
                     "a",
                     {
                       href: "mailto:payjalgoti@gmail.com",
-                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform",
+                      className: "card-light px-3 py-5 flex flex-col items-center justify-center gap-2 no-underline group hover:scale-105 transition-transform",
                       "data-ocid": "contact.link",
                       children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(
-                          Mail,
-                          {
-                            size: 24,
-                            className: "text-gold group-hover:text-gold-bright transition-colors"
-                          }
-                        ),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-muted-foreground", children: "Email" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-sm break-all", children: "payjalgoti@gmail.com" })
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { size: 22, className: "text-gold group-hover:text-gold-bright transition-colors" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] text-muted-foreground", children: "Email" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-xs sm:text-sm whitespace-nowrap", children: "payjalgoti@gmail.com" })
                       ]
                     }
                   ),
@@ -23121,26 +23140,45 @@ function App() {
                     "a",
                     {
                       href: "tel:+15066889777",
-                      className: "card-light p-5 flex flex-col items-center gap-3 no-underline group hover:scale-105 transition-transform",
+                      className: "card-light px-3 py-5 flex flex-col items-center justify-center gap-2 no-underline group hover:scale-105 transition-transform",
                       "data-ocid": "contact.link",
                       children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(
-                          Phone,
-                          {
-                            size: 24,
-                            className: "text-gold group-hover:text-gold-bright transition-colors"
-                          }
-                        ),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-muted-foreground", children: "Phone" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-sm", children: "+1(506)688-9777" })
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { size: 22, className: "text-gold group-hover:text-gold-bright transition-colors" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] text-muted-foreground", children: "Phone" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-xs sm:text-sm whitespace-nowrap", children: "+1(506)688-9777" })
                       ]
                     }
                   ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card-light p-5 flex flex-col items-center gap-3 hover:scale-105 transition-transform", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { size: 24, className: "text-gold" }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-muted-foreground", children: "Location" }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-sm text-center", children: "14, Kenview Dr, Moncton, NB" })
-                  ] })
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "a",
+                    {
+                      href: "https://www.google.com/maps/search/?api=1&query=14+Kenview+Dr,+Moncton,+NB",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "card-light px-3 py-5 flex flex-col items-center justify-center gap-2 no-underline group hover:scale-105 transition-transform text-center",
+                      "data-ocid": "contact.link",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { size: 22, className: "text-gold group-hover:text-gold-bright transition-colors" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] text-muted-foreground", children: "Location" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-xs sm:text-sm whitespace-nowrap", children: "14, Kenview Dr, Moncton, NB" })
+                      ]
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "a",
+                    {
+                      href: "https://www.google.com/search?q=the+cravecoach+moncton&sca_esv=d50c116370280445&authuser=5&sxsrf=APpeQntOEJI-EV2FsLs7sZ_j_eqdEshzqA%3A1788679198252&source=hp&ei=HhSdatm_DYzI1sQPusfvwAU&iflsig=ABILxe8AAAAAap0iLuSxyMpXYcgQYy1qCsMX98_rn4Nv&ved=0ahUKEwjZxuihtdmWAxUMpJUCHbrjG1gQ4dUDCCs&uact=5&oq=cravecoach+moncton&gs_lp=Egdnd3Mtd2l6IhJjcmF2ZWNvYWNoIG1vbmN0b24yBxAhGAoYoAEyBxAhGAoYoAFI7ElQng9Y6EZwBHgAkAEAmAH5AaABriGqAQcwLjEwLjExuAEDyAEA-AEBmAIXoALiHqgCCsICChAAGAMYjwEY6gLCAgsQABiABBiKBRiRAsICCxAuGIAEGIoFGJECwgIOEAAYgAQYigUYkQIYsQPCAhEQLhiABBiKBRiRAhjHARjRA8ICCBAAGIAEGLEDwgIKEAAYgAQYigUYQ8ICERAuGIAEGLEDGIMBGMcBGNEDwgILEAAYgAQYsQMYgwHCAhEQLhiABBiKBRiRAhjHARivAcICDRAAGIAEGIoFGEMYsQPCAgoQLhiABBiKBRhDwgIIEC4YgAQYsQPCAgsQLhiABBjHARivAcICBRAAGIAEwgIHEAAYgAQYCsICCRAAGIAEGAoYC8ICBhAAGB4YDcICCxAAGIAEGIoFGIYDmAMP8QVkDeneuPci75IHBjQuMTAuOaAHsFSyBwYwLjEwLjm4B8gewgcIMS4xNS42LjHIB0eACAE&sclient=gws-wiz#lrd=0x4ca0c74b4d59346b:0xe70fcce71830f483,1,,,",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "card-light min-w-[200px] w-full px-5 py-6 flex flex-col items-center justify-center gap-2 no-underline group hover:scale-105 transition-transform border border-gold/30 text-center",
+                      "data-ocid": "contact.link",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex text-amber-500 gap-0.5", children: [...Array(5)].map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { size: 14, className: "fill-current" }, i)) }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs text-muted-foreground", children: "Google Reviews" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-gold font-semibold text-xs sm:text-sm whitespace-nowrap group-hover:underline", children: "5.0 ★ (50+ Reviews)" })
+                      ]
+                    }
+                  )
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "button",
