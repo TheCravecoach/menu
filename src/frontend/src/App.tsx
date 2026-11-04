@@ -128,7 +128,7 @@ function SparkleParticles() {
               strokeWidth={1.2}
               className="text-gold"
               style={{
-                filter: "drop-shadow(0 2px 4px oklch(0.76 0.16 80 / 30%))",
+                filter: "drop-shadow(0 2px 4px rgba(231, 50, 19, 0.3))",
               }}
             />
           </div>
@@ -181,7 +181,7 @@ function CakeCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.04, duration: 0.4 }}
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
-      className="p-5 rounded-2xl bg-white/60 border border-black/5 hover:border-gold/50 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center gap-3 relative group overflow-hidden"
+      className="p-5 rounded-2xl bg-[#9dbeb7]/25 border border-[#9dbeb7]/45 hover:border-gold/50 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center gap-3 relative group overflow-hidden"
       data-ocid={`menu.item.${index + 1}`}
     >
       <div className="text-3xl transition-transform duration-300 group-hover:scale-125">
@@ -190,7 +190,7 @@ function CakeCard({
       <h3 className="font-display font-semibold text-foreground leading-tight text-sm md:text-base">
         {name}
       </h3>
-      <div className="flex items-center justify-center gap-6 mt-1 w-full pt-2 border-t border-black/5">
+      <div className="flex items-center justify-center gap-6 mt-1 w-full pt-2 border-t border-[#9dbeb7]/45">
         <div className="flex flex-col items-center">
           <span className="text-[10px] uppercase tracking-wider text-muted-foreground">500g</span>
           <span className="font-bold text-gold text-sm">${price500}</span>
@@ -222,7 +222,7 @@ function TreatCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.06, duration: 0.4 }}
       whileHover={{ scale: 1.02 }}
-      className="p-5 rounded-2xl bg-white/60 border border-black/5 hover:border-gold/50 shadow-sm flex items-center justify-between gap-4"
+      className="p-5 rounded-2xl bg-[#9dbeb7]/25 border border-[#9dbeb7]/45 hover:border-gold/50 shadow-sm flex items-center justify-between gap-4"
       data-ocid={`treats.item.${index + 1}`}
     >
       <div className="flex items-center gap-3">
@@ -318,7 +318,7 @@ export default function App() {
     <div
       className="min-h-screen selection:bg-gold/30 selection:text-foreground"
       style={{
-        background: "#fefae0",
+        background: "#efe6d5",
       }}
     >
       {/* ── Navbar ── */}
@@ -348,7 +348,7 @@ export default function App() {
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   className="relative flex items-center justify-center mb-1.5"
                 >
-                  <Cake size={32} strokeWidth={1.5} className="text-gold drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]" />
+                  <Cake size={32} strokeWidth={1.5} className="text-gold drop-shadow-[0_0_8px_rgba(231,50,19,0.6)]" />
                 </motion.div>
 
                 <div className="flex flex-col items-center">
@@ -388,8 +388,8 @@ export default function App() {
               onClick={shareMenu}
               className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-widest transition-all duration-200 hover:glow-gold"
               style={{
-                border: "1px solid oklch(0.76 0.16 80 / 50%)",
-                color: "oklch(0.45 0.16 65)",
+                border: "1px solid rgba(157, 190, 183, 0.6)",
+                color: "#e73213",
                 letterSpacing: "0.1em",
               }}
               data-ocid="nav.button"
@@ -404,7 +404,7 @@ export default function App() {
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label="Toggle Navigation Menu"
-            className="md:hidden p-2.5 rounded-xl text-gold hover:bg-black/5 active:scale-95 transition-all z-50 focus:outline-none"
+            className="md:hidden p-2.5 rounded-xl text-gold hover:bg-[#9dbeb7]/30 active:scale-95 transition-all z-50 focus:outline-none"
             data-ocid="nav.toggle"
           >
             {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -421,10 +421,10 @@ export default function App() {
               transition={{ duration: 0.2 }}
               className="md:hidden w-full overflow-hidden border-b shadow-xl"
               style={{
-                background: "rgba(254, 250, 224, 0.98)",
+                background: "rgba(239, 230, 213, 0.98)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
-                borderBottomColor: "oklch(0.76 0.16 80 / 30%)",
+                borderBottomColor: "rgba(157, 190, 183, 0.5)",
               }}
               data-ocid="nav.modal"
             >
@@ -437,7 +437,7 @@ export default function App() {
                     className="w-full text-left py-3 px-2 text-sm font-semibold tracking-widest border-b transition-colors hover:text-gold active:bg-gold/10 rounded-lg flex items-center justify-between"
                     style={{
                       color: "oklch(0.35 0.03 100)",
-                      borderBottomColor: "oklch(0.76 0.16 80 / 15%)",
+                      borderBottomColor: "rgba(157, 190, 183, 0.4)",
                       letterSpacing: "0.15em",
                     }}
                     data-ocid="nav.link"
@@ -481,7 +481,7 @@ export default function App() {
         {/* Skiper Ambient Radial Light */}
         <div
           className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] rounded-full blur-[140px] pointer-events-none"
-          style={{ background: "oklch(0.76 0.16 80 / 25%)" }}
+          style={{ background: "rgba(157, 190, 183, 0.55)" }}
         />
 
         <SparkleParticles />
@@ -496,17 +496,17 @@ export default function App() {
             <div
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider mb-8 shadow-sm backdrop-blur-md"
               style={{
-                border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
-                background: "rgba(255, 255, 255, 0.85)",
+                border: "1.5px solid rgba(157, 190, 183, 0.8)",
+                background: "rgba(239, 230, 213, 0.92)",
               }}
             >
-              <div className="flex text-amber-500">
+              <div className="flex text-gold">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={13} className="fill-current" />
                 ))}
               </div>
               <span className="font-bold shimmer-text">5.0 Star Google Rating</span>
-              <span className="text-black/30">•</span>
+              <span className="text-foreground/30">•</span>
               <span className="font-bold shimmer-text">100% Eggless Kitchen</span>
             </div>
           </motion.div>
@@ -546,9 +546,9 @@ export default function App() {
               className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
               style={{
                 background: "transparent",
-                border: "2px solid oklch(0.55 0.14 65)",
-                color: "oklch(0.45 0.16 65)",
-                boxShadow: "0 0 20px oklch(0.76 0.16 80 / 30%)",
+                border: "2px solid #e73213",
+                color: "#e73213",
+                boxShadow: "0 0 20px rgba(231, 50, 19, 0.3)",
               }}
               data-ocid="hero.primary_button"
             >
@@ -559,10 +559,10 @@ export default function App() {
               href="https://wa.me/15066889777"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105 shadow-lg shadow-pink-900/10"
+              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105 shadow-lg shadow-gold/10"
               style={{
-                background: "oklch(0.55 0.14 65)",
-                color: "#fefae0",
+                background: "#e73213",
+                color: "#efe6d5",
               }}
               data-ocid="hero.secondary_button"
             >
@@ -575,8 +575,8 @@ export default function App() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
               style={{
-                background: "rgba(255, 255, 255, 0.8)",
-                border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
+                background: "rgba(239, 230, 213, 0.9)",
+                border: "1.5px solid rgba(157, 190, 183, 0.8)",
                 color: "oklch(0.35 0.03 100)",
               }}
               data-ocid="hero.ig_button"
@@ -591,13 +591,13 @@ export default function App() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
               style={{
-                background: "rgba(255, 255, 255, 0.8)",
-                border: "1.5px solid oklch(0.76 0.16 80 / 60%)",
+                background: "rgba(239, 230, 213, 0.9)",
+                border: "1.5px solid rgba(157, 190, 183, 0.8)",
                 color: "oklch(0.35 0.03 100)",
               }}
               data-ocid="hero.reviews_button"
             >
-              <div className="flex text-amber-500">
+              <div className="flex text-gold">
                 <Star size={14} className="fill-current" />
               </div>
               Reviews
@@ -622,8 +622,8 @@ export default function App() {
                 key={badge.text}
                 className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium"
                 style={{
-                  background: "rgba(255, 255, 255, 0.85)",
-                  border: "1px solid rgba(0, 0, 0, 0.08)",
+                  background: "rgba(239, 230, 213, 0.92)",
+                  border: "1px solid rgba(157, 190, 183, 0.65)",
                   color: "oklch(0.35 0.03 100)",
                 }}
               >
@@ -637,13 +637,13 @@ export default function App() {
         <div
           className="absolute bottom-0 left-0 right-0 h-32"
           style={{
-            background: "linear-gradient(to bottom, transparent, #fefae0)",
+            background: "linear-gradient(to bottom, transparent, #efe6d5)",
           }}
         />
       </section>
 
       {/* ── Skiper UI Infinite Ribbon Marquee ── */}
-      <div className="relative w-full overflow-hidden py-4 border-y border-black/5 bg-white/40 backdrop-blur-sm">
+      <div className="relative w-full overflow-hidden py-4 border-y border-[#9dbeb7]/45 bg-[#9dbeb7]/20 backdrop-blur-sm">
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{ ease: "linear", duration: 25, repeat: Infinity }}
@@ -652,7 +652,7 @@ export default function App() {
           {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, idx) => (
             <span key={idx} className="flex items-center gap-3">
               {item}
-              <span className="text-black/20">•</span>
+              <span className="text-foreground/20">•</span>
             </span>
           ))}
         </motion.div>
@@ -677,7 +677,7 @@ export default function App() {
           {/* Card 1 */}
           <motion.div
             whileHover={{ y: -6 }}
-            className="p-8 rounded-3xl bg-white/70 border border-black/10 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between"
+            className="p-8 rounded-3xl bg-[#9dbeb7]/20 border border-[#9dbeb7]/45 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between"
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-gold/15 text-gold flex items-center justify-center mb-6">
@@ -699,11 +699,11 @@ export default function App() {
           {/* Card 2 (Special Center Accent) */}
           <motion.div
             whileHover={{ y: -6 }}
-            className="p-8 rounded-3xl bg-gradient-to-b from-white/90 to-white/50 border-2 border-gold/40 shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+            className="p-8 rounded-3xl bg-gradient-to-b from-[#efe6d5]/90 to-[#9dbeb7]/50 border-2 border-gold/40 shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
           >
             <div className="absolute -top-12 -right-12 w-36 h-36 bg-gold/10 rounded-full blur-2xl pointer-events-none" />
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-gold text-white flex items-center justify-center mb-6 shadow-md shadow-gold/30">
+              <div className="w-12 h-12 rounded-2xl bg-gold text-[#efe6d5] flex items-center justify-center mb-6 shadow-md shadow-gold/30">
                 <Sparkles size={26} />
               </div>
               <h3 className="font-display font-bold text-xl text-foreground mb-2">
@@ -723,7 +723,7 @@ export default function App() {
           {/* Card 3 */}
           <motion.div
             whileHover={{ y: -6 }}
-            className="p-8 rounded-3xl bg-white/70 border border-black/10 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between"
+            className="p-8 rounded-3xl bg-[#9dbeb7]/20 border border-[#9dbeb7]/45 hover:border-gold/60 shadow-sm transition-all duration-300 flex flex-col justify-between"
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-gold/15 text-gold flex items-center justify-center mb-6">
@@ -757,10 +757,7 @@ export default function App() {
               Handcrafted with{" "}
               <span className="gold-gradient-text">Love & Precision</span>
             </h2>
-            <p
-              className="text-base leading-relaxed max-w-2xl mx-auto mb-12"
-              style={{ color: "oklch(0.35 0.03 100)" }}
-            >
+            <p className="text-base leading-relaxed max-w-2xl mx-auto mb-12 text-foreground">
               At The CraveCoach, we believe every celebration deserves a cake
               that's as extraordinary as the moment. Operating from our
               dedicated eggless kitchen in Moncton, NB, we pour our hearts into
@@ -778,16 +775,10 @@ export default function App() {
               { stat: "Daily", label: "Handcrafted Fresh" },
             ].map((s) => (
               <div key={s.stat} className="card-light p-8 text-center hover:scale-105 transition-transform duration-300">
-                <div className="font-display text-4xl font-black gold-gradient-text mb-2">
+                <div className="font-display text-4xl font-black text-gold mb-2">
                   {s.stat}
                 </div>
-                <div
-                  className="text-sm font-medium tracking-wider"
-                  style={{
-                    color: "oklch(0.35 0.03 100)",
-                    letterSpacing: "0.1em",
-                  }}
-                >
+                <div className="text-sm font-semibold tracking-wider text-foreground">
                   {s.label}
                 </div>
               </div>
@@ -814,7 +805,7 @@ export default function App() {
                 className="h-px w-32"
                 style={{
                   background:
-                    "linear-gradient(to right, transparent, oklch(0.55 0.14 65), transparent)",
+                    "linear-gradient(to right, transparent, #e73213, transparent)",
                 }}
               />
             </div>
@@ -822,7 +813,7 @@ export default function App() {
               className="mt-4 text-sm"
               style={{ color: "oklch(0.35 0.03 100)" }}
             >
-              <span className="text-red-400 font-medium">Note:</span> Please
+              <span className="text-gold font-medium">Note:</span> Please
               book your order 2-3 days in advance
             </p>
           </div>
@@ -898,9 +889,9 @@ export default function App() {
                   <span
                     className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold"
                     style={{
-                      background: "oklch(0.76 0.16 80 / 15%)",
-                      border: "1px solid oklch(0.76 0.16 80 / 40%)",
-                      color: "oklch(0.45 0.16 65)",
+                      background: "rgba(157, 190, 183, 0.25)",
+                      border: "1px solid rgba(157, 190, 183, 0.65)",
+                      color: "#e73213",
                     }}
                   >
                     ⚠️ Minimum order: 6 pieces per item
@@ -918,23 +909,16 @@ export default function App() {
       </section>
 
       {/* ── Contact / Footer ── */}
-      <footer id="contact" className="mt-12">
-        <div
-          className="py-16 px-6"
-          style={{
-            background:
-              "linear-gradient(135deg, #f6f1d8 0%, #f1ecd0 100%)",
-            borderTop: "1px solid oklch(0.76 0.16 80 / 20%)",
-          }}
-        >
+      <footer
+        id="contact"
+        className="bg-gradient-to-br from-background via-background to-secondary/70"
+      >
+        <div className="py-16 px-6">
           <div className="max-w-full mx-auto px-4 sm:px-8 text-center">
             <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
               <span className="gold-gradient-text">Get in Touch</span>
             </h2>
-            <p
-              className="text-sm mb-10"
-              style={{ color: "oklch(0.35 0.03 100)" }}
-            >
+            <p className="text-sm mb-10 text-foreground">
               Craving a closer look? 🎂 See our latest creations on Instagram!
             </p>
 
@@ -1005,14 +989,14 @@ export default function App() {
                 className="card-light min-w-[200px] w-full px-5 py-6 flex flex-col items-center justify-center gap-2 no-underline group hover:scale-105 transition-transform border border-gold/30 text-center"
                 data-ocid="contact.link"
               >
-                <div className="flex text-amber-500 gap-0.5">
+                <div className="flex text-gold gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={14} className="fill-current" />
                   ))}
                 </div>
                 <div className="text-xs text-muted-foreground">Google Reviews</div>
                 <div className="text-gold font-semibold text-xs sm:text-sm whitespace-nowrap group-hover:underline">
-                  5.0 ★ (50+ Reviews)
+                  5.0 ★ (80+ Reviews)
                 </div>
               </a>
             </div>
@@ -1022,9 +1006,9 @@ export default function App() {
               onClick={shareMenu}
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105"
               style={{
-                border: "2px solid oklch(0.76 0.16 80 / 60%)",
-                color: "oklch(0.45 0.16 65)",
-                background: "oklch(0.76 0.16 80 / 10%)",
+                border: "2px solid rgba(157, 190, 183, 0.8)",
+                color: "#e73213",
+                background: "rgba(157, 190, 183, 0.2)",
               }}
               data-ocid="contact.button"
             >
@@ -1033,14 +1017,8 @@ export default function App() {
           </div>
         </div>
 
-        <div
-          className="py-6 px-6 text-center"
-          style={{
-            background: "#fefae0",
-            borderTop: "1px solid oklch(0.76 0.16 80 / 10%)",
-          }}
-        >
-          <p className="text-xs" style={{ color: "oklch(0.35 0.03 100)" }}>
+        <div className="py-6 px-6 text-center">
+          <p className="text-xs text-foreground">
             © {new Date().getFullYear()} The CraveCoach. All Rights Reserved.
           </p>
         </div>
@@ -1057,8 +1035,8 @@ export default function App() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 animate-pulse-gold"
             style={{
-              background: "oklch(0.55 0.14 65)",
-              color: "#fefae0",
+              background: "#e73213",
+              color: "#efe6d5",
             }}
             data-ocid="nav.button"
             aria-label="Back to top"

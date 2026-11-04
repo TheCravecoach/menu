@@ -71,9 +71,9 @@ export default {
           ring: "oklch(var(--sidebar-ring))",
         },
         gold: {
-          DEFAULT: "oklch(0.55 0.14 65)",
-          bright: "oklch(0.45 0.16 65)",
-          dim: "oklch(0.35 0.10 65)",
+          DEFAULT: "#e73213",
+          bright: "#e73213",
+          dim: "#9dbeb7",
         },
       },
       borderRadius: {
@@ -83,8 +83,8 @@ export default {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgba(0,0,0,0.05)",
-        gold: "0 0 20px oklch(0.76 0.16 80 / 40%), 0 0 40px oklch(0.76 0.16 80 / 20%)",
-        "gold-sm": "0 0 10px oklch(0.76 0.16 80 / 30%)",
+        gold: "0 0 20px rgba(231,50,19,0.4), 0 0 40px rgba(231,50,19,0.2)",
+        "gold-sm": "0 0 10px rgba(231,50,19,0.3)",
       },
       keyframes: {
         "accordion-down": {
@@ -96,8 +96,8 @@ export default {
           to: { height: "0" },
         },
         "pulse-gold": {
-          "0%, 100%": { boxShadow: "0 0 10px oklch(0.76 0.16 80 / 30%)" },
-          "50%": { boxShadow: "0 0 25px oklch(0.76 0.16 80 / 60%), 0 0 50px oklch(0.76 0.16 80 / 30%)" },
+          "0%, 100%": { boxShadow: "0 0 10px rgba(231,50,19,0.3)" },
+          "50%": { boxShadow: "0 0 25px rgba(231,50,19,0.6), 0 0 50px rgba(231,50,19,0.3)" },
         },
       },
       animation: {

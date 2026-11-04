@@ -7,39 +7,39 @@
 @layer base {
   :root {
     --radius: 0.75rem;
-    /* Dark futuristic theme tokens (OKLCH L C H) */
-    --background: 0.97 0.03 105;
-    --foreground: 0.20 0.02 105;
-    --card: 0.99 0.01 105;
-    --card-foreground: 0.20 0.02 105;
-    --popover: 0.14 0.005 260;
-    --popover-foreground: 0.95 0.01 85;
-    --primary: 0.76 0.16 80;
-    --primary-foreground: 0.06 0 0;
-    --secondary: 0.14 0.005 260;
-    --secondary-foreground: 0.95 0.01 85;
-    --muted: 0.14 0.005 260;
-    --muted-foreground: 0.74 0.01 85;
-    --accent: 0.89 0.17 82;
-    --accent-foreground: 0.06 0 0;
-    --destructive: 0.577 0.245 27.325;
-    --destructive-foreground: 0.985 0 0;
-    --border: 0.76 0.16 80 / 20%;
-    --input: 0.76 0.16 80 / 15%;
-    --ring: 0.76 0.16 80;
-    --chart-1: 0.76 0.16 80;
-    --chart-2: 0.6 0.118 184.704;
-    --chart-3: 0.398 0.07 227.392;
-    --chart-4: 0.828 0.189 84.429;
-    --chart-5: 0.769 0.188 70.08;
-    --sidebar: 0.1 0.005 260;
-    --sidebar-foreground: 0.95 0.01 85;
-    --sidebar-primary: 0.76 0.16 80;
-    --sidebar-primary-foreground: 0.06 0 0;
-    --sidebar-accent: 0.14 0.005 260;
-    --sidebar-accent-foreground: 0.95 0.01 85;
-    --sidebar-border: 0.76 0.16 80 / 20%;
-    --sidebar-ring: 0.76 0.16 80;
+    /* Warm bakery palette: beige, sage, and tomato red. */
+    --background: 0.93 0.03 82;
+    --foreground: 0.25 0.02 55;
+    --card: 0.93 0.03 82;
+    --card-foreground: 0.25 0.02 55;
+    --popover: 0.93 0.03 82;
+    --popover-foreground: 0.25 0.02 55;
+    --primary: 0.59 0.21 32;
+    --primary-foreground: 0.93 0.03 82;
+    --secondary: 0.77 0.04 180;
+    --secondary-foreground: 0.25 0.02 55;
+    --muted: 0.77 0.04 180;
+    --muted-foreground: 0.35 0.02 55;
+    --accent: 0.77 0.04 180;
+    --accent-foreground: 0.25 0.02 55;
+    --destructive: 0.59 0.21 32;
+    --destructive-foreground: 0.93 0.03 82;
+    --border: 0.77 0.04 180 / 45%;
+    --input: 0.77 0.04 180 / 60%;
+    --ring: 0.59 0.21 32;
+    --chart-1: 0.59 0.21 32;
+    --chart-2: 0.77 0.04 180;
+    --chart-3: 0.93 0.03 82;
+    --chart-4: 0.59 0.21 32;
+    --chart-5: 0.77 0.04 180;
+    --sidebar: 0.93 0.03 82;
+    --sidebar-foreground: 0.25 0.02 55;
+    --sidebar-primary: 0.59 0.21 32;
+    --sidebar-primary-foreground: 0.93 0.03 82;
+    --sidebar-accent: 0.77 0.04 180;
+    --sidebar-accent-foreground: 0.25 0.02 55;
+    --sidebar-border: 0.77 0.04 180 / 45%;
+    --sidebar-ring: 0.59 0.21 32;
   }
 
   * {
@@ -51,38 +51,38 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: #fefae0;
+    background-color: #efe6d5;
     min-height: 100vh;
   }
 }
 
 @layer utilities {
   .text-gold {
-    color: oklch(0.55 0.14 65);
+    color: #e73213;
   }
   .text-gold-bright {
-    color: oklch(0.45 0.16 65);
+    color: #e73213;
   }
   .bg-gold {
-    background-color: oklch(0.55 0.14 65);
+    background-color: #e73213;
   }
   .border-gold {
-    border-color: oklch(0.55 0.14 65);
+    border-color: #e73213;
   }
   .border-gold-dim {
-    border-color: oklch(0.76 0.16 80 / 30%);
+    border-color: #9dbeb7;
   }
   .glow-gold {
-    box-shadow: 0 0 20px oklch(0.76 0.16 80 / 40%), 0 0 40px
-      oklch(0.76 0.16 80 / 20%);
+    box-shadow: 0 0 20px rgba(231, 50, 19, 0.4), 0 0 40px
+      rgba(231, 50, 19, 0.2);
   }
   .glow-gold-sm {
-    box-shadow: 0 0 10px oklch(0.76 0.16 80 / 30%), 0 0 20px
-      oklch(0.76 0.16 80 / 15%);
+    box-shadow: 0 0 10px rgba(231, 50, 19, 0.3), 0 0 20px
+      rgba(231, 50, 19, 0.15);
   }
   .text-glow-gold {
-    text-shadow: 0 0 20px oklch(0.76 0.16 80 / 80%), 0 0 40px
-      oklch(0.76 0.16 80 / 40%);
+    text-shadow: 0 0 20px rgba(231, 50, 19, 0.8), 0 0 40px
+      rgba(231, 50, 19, 0.4);
   }
   .font-display {
     font-family: "Playfair Display", serif;
@@ -93,27 +93,29 @@
   .gold-gradient-text {
     background: linear-gradient(
       135deg,
-      oklch(0.45 0.16 65) 0%,
-      oklch(0.55 0.14 65) 50%,
-      oklch(0.45 0.16 65) 100%
+      #e73213 0%,
+      #9dbeb7 50%,
+      #e73213 100%
     );
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: shimmer 4s linear infinite;
   }
   .card-light {
     background: linear-gradient(
       135deg,
-      #ffffff 0%,
-      #faf7e8 100%
+      #efe6d5 0%,
+      #9dbeb7 100%
     );
-    border: 1px solid oklch(0.76 0.16 80 / 20%);
+    border: 1px solid rgba(157, 190, 183, 0.45);
     border-radius: 12px;
     transition: all 0.3s ease;
   }
   .card-light:hover {
-    border-color: oklch(0.76 0.16 80 / 60%);
-    box-shadow: 0 0 20px oklch(0.76 0.16 80 / 20%), 0 8px 32px
+    border-color: #e73213;
+    box-shadow: 0 0 20px rgba(231, 50, 19, 0.2), 0 8px 32px
       rgba(0, 0, 0, 0.05);
     transform: translateY(-2px);
   }
@@ -196,10 +198,10 @@
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    oklch(0.55 0.14 65) 0%,
-    oklch(0.65 0.12 65) 40%,
-    oklch(0.45 0.16 65) 60%,
-    oklch(0.55 0.14 65) 100%
+    #e73213 0%,
+    #9dbeb7 40%,
+    #e73213 60%,
+    #e73213 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -211,34 +213,34 @@
 .navbar-blur {
   background: linear-gradient(
     to bottom,
-    rgba(254, 250, 224, 0.95) 0%,
-    rgba(254, 250, 224, 0.90) 100%
+    rgba(239, 230, 213, 0.95) 0%,
+    rgba(239, 230, 213, 0.90) 100%
   );
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid oklch(0.76 0.16 80 / 15%);
+  border-bottom: 1px solid rgba(157, 190, 183, 0.45);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), inset 0 -1px 0
-    oklch(0.76 0.16 80 / 10%);
+    rgba(157, 190, 183, 0.3);
 }
 
 .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(254, 250, 224, 0.7) 0%,
-    rgba(254, 250, 224, 0.5) 40%,
-    rgba(254, 250, 224, 0.8) 80%,
-    rgba(254, 250, 224, 1) 100%
+    rgba(239, 230, 213, 0.7) 0%,
+    rgba(239, 230, 213, 0.5) 40%,
+    rgba(239, 230, 213, 0.8) 80%,
+    rgba(239, 230, 213, 1) 100%
   );
 }
 
 .tab-active {
   background: linear-gradient(
     135deg,
-    oklch(0.76 0.16 80 / 20%) 0%,
-    oklch(0.76 0.16 80 / 10%) 100%
+    rgba(231, 50, 19, 0.15) 0%,
+    rgba(157, 190, 183, 0.25) 100%
   );
-  border-color: oklch(0.76 0.16 80 / 80%);
-  color: oklch(0.45 0.16 65);
-  box-shadow: 0 0 15px oklch(0.76 0.16 80 / 30%), inset 0 0 10px
-    oklch(0.76 0.16 80 / 10%);
+  border-color: #e73213;
+  color: #e73213;
+  box-shadow: 0 0 15px rgba(231, 50, 19, 0.3), inset 0 0 10px
+    rgba(157, 190, 183, 0.2);
 }
